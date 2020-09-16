@@ -63,9 +63,9 @@
     </artist_site>
     <album>Sheer Heart Attack</album>
     <album_info>
-        <description>Skeletal Lamping</description> 
+        <description>Sheer Heart Attack</description> 
         <url>
-            https://www.allmusic.com/album/skeletal-lamping-mw0000794140
+            https://www.allmusic.com/album/sheer-heart-attack-mw0000191374
         </url>
     </album_info>
     <release_date > 
@@ -75,31 +75,7 @@
 </song>
 <song>
     <album_art>
-    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=55s1w7kJqto6al-_jYk7S9_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
-    </album_art>
-    <name>Killer Queen</name>
-    <artist>Queen</artist>
-    <artist_site>
-        <description>Queen's Website</description> 
-        <url>
-            https://www.queenonlinestore.com/
-        </url>
-    </artist_site>
-    <album>Sheer Heart Attack</album>
-    <album_info>
-        <description>Skeletal Lamping</description> 
-        <url>
-            https://www.allmusic.com/album/skeletal-lamping-mw0000794140
-        </url>
-    </album_info>
-    <release_date > 
-    11, October 1974
-    </release_date>
-    <genre>Art Pop, Glam Rock, Power Pop</genre>
-</song>
-<song>
-    <album_art>
-    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=55s1w7kJqto6al-_jYk7S9_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=xVK0dS5isz4ZNY5rGlkviw4Q1ghY8VaPylnm7PwcKNY=&f=5]]></url>
     </album_art>
     <name>Stayin' Alive</name>
     <artist>Bee Gees</artist>
@@ -133,9 +109,9 @@
             https://alanwalker.no
         </url>
     </artist_site>
-    <album>Sheer Heart Attack</album>
+    <album>Faded</album>
     <album_info>
-        <description>Skeletal Lamping</description> 
+        <description>Faded</description> 
         <url>
             https://www.allmusic.com/album/faded-mw0002913290
         </url>
@@ -181,9 +157,9 @@
             https://open.spotify.com/artist/0uYtAzdxQVWpfAxQeNYCHN
         </url>
     </artist_site>
-    <album>https://www.allmusic.com/album/ricky-ricardo-mw0002556412</album>
+    <album>Jauzzi Blues, the Interlude</album>
     <album_info>
-        <description>Album Ricky Ricardo Information</description> 
+        <description>Jauzzi Blues, the Interlude</description> 
         <url>
             https://www.allmusic.com/album/ricky-ricardo-mw0002556412
         </url>
@@ -207,7 +183,7 @@
     </artist_site>
     <album>The Mollusk</album>
     <album_info>
-        <description>Album Info</description> 
+        <description>The Mollusk</description> 
         <url>
             https://www.allmusic.com/album/the-mollusk-mw0000023211
         </url>
@@ -231,7 +207,7 @@
     </artist_site>
     <album>Native</album>
     <album_info>
-        <description>OneRepublic Native</description> 
+        <description>Native</description> 
         <url>
             https://www.allmusic.com/album/native-mw0002484790
         </url>
@@ -255,7 +231,7 @@
     </artist_site>
     <album>Ten Summoner's Tale</album>
     <album_info>
-        <description>Album Information</description> 
+        <description>Ten Summoner's Tale</description> 
         <url>
             https://www.allmusic.com/album/ten-summoners-tales-mw0000094858
         </url>
