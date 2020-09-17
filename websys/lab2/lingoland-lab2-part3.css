@@ -1,8 +1,38 @@
-.song_name{
-	font-variant: small-caps;
+body{
+	background-image: linear-gradient(tomato, lightblue);
 }
 
-.artist_name{
+.song-list{
+	border-style: solid;
+	border-color: DodgerBlue;
+}
+.list-end{
+	text-align: center;
+	font-size: smaller;
+}
+
+.song-data{
+	list-style-type: none;
+}
+.genre-data{
+	list-style-type: none;
+}
+.genre-data > li:before{
+	content: "- ";
+}
+img{
+	width: 150px;
+	padding: 10px;
+	float: right;
+}
+.song-name{
+	font-variant: small-caps;
+}
+.favorite{
+	color: green;
+}
+
+.artist-name{
 	font-weight: bold;
 	font-size: 120%;
 }
@@ -15,3 +45,8 @@
 .genre{
 	font-size: smaller;
 }
+
+/*section{
+	border-style: solid;
+	border-color: neon;
+}*/
