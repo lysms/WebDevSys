@@ -1,0 +1,23 @@
+song > *{
+	display: block;
+}
+song > * > *{
+	display: block;
+}
+
+song::after{
+	content: "\A";
+	white-space: pre;
+}
+
+name {
+	font-size: smaller;
+}
+
+artist{
+	color: blue;
+}
+
+album{
+	font-style: italic;
+}
