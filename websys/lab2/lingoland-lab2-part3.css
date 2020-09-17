@@ -1,0 +1,11 @@
+.song_name{
+	font-variant: small-caps;
+}
+
+.artist_name{
+	font-weight: bold;
+	font-size: 120%;
+}
+.album{
+	font-style: italic;
+}
