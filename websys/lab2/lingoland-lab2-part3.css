@@ -9,3 +9,9 @@
 .album{
 	font-style: italic;
 }
+.release-date{
+	font-size: smaller;
+}
+.genre{
+	font-size: smaller;
+}
