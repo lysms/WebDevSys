@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="lab2.css"?> 
+<songs>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=huKFPlUndVNPG4A4IpnwJd_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
+    </album_art>
+    <name>Don't Pray On Me</name>
+    <artist>Bad Religion</artist>
+    <artist_site>
+        <description>Bad Religion's Website</description> 
+        <url>
+            https://badreligion.com/
+        </url>
+    </artist_site>
+    <album>Recipe For Hate</album>
+    <album_info>
+        <description>Recipe For Hate</description> 
+        <url>
+            https://www.allmusic.com/album/recipe-for-hate-mw0000620243
+        </url>
+    </album_info>
+    <release_date > 
+    21, September 1993
+    </release_date>
+    <genre>Skate Punk, Melodic Hardcore, Punk Rock</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=xs8WO226DgnifjYe72pslByhM-OFI8zG4l-qVpXXB1I=&f=5]]></url>
+    </album_art>
+    <name>An Eluardian Instance</name>
+    <artist>of Montreal</artist>
+    <artist_site>
+        <description>of Montreal's Website</description> 
+        <url>
+            https://www.ofmontreal.net/
+        </url>
+    </artist_site>
+    <album>Skeletal Lamping</album>
+    <album_info>
+        <description>Skeletal Lamping</description> 
+        <url>
+            https://www.allmusic.com/album/skeletal-lamping-mw0000794140
+        </url>
+    </album_info>
+    <release_date > 
+    21, October 2008
+    </release_date>
+    <genre>Psychedelic Pop, Indie Pop, Art Pop, Progressive Pop, Neo-Psychedelia, Glam Rock, Funk, Experimental Rock, Indietronica</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=55s1w7kJqto6al-_jYk7S9_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
+    </album_art>
+    <name>Killer Queen</name>
+    <artist>Queen</artist>
+    <artist_site>
+        <description>Queen's Website</description> 
+        <url>
+            https://www.queenonlinestore.com/
+        </url>
+    </artist_site>
+    <album>Sheer Heart Attack</album>
+    <album_info>
+        <description>Sheer Heart Attack</description> 
+        <url>
+            https://www.allmusic.com/album/sheer-heart-attack-mw0000191374
+        </url>
+    </album_info>
+    <release_date > 
+    11, October 1974
+    </release_date>
+    <genre>Art Pop, Glam Rock, Power Pop</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=xVK0dS5isz4ZNY5rGlkviw4Q1ghY8VaPylnm7PwcKNY=&f=5]]></url>
+    </album_art>
+    <name>Stayin' Alive</name>
+    <artist>Bee Gees</artist>
+    <artist_site>
+        <description>Bee Gees' Website</description> 
+        <url>
+            https://www.beegees.com/
+        </url>
+    </artist_site>
+    <album>Staying Alive</album>
+    <album_info>
+        <description>Staying Alive</description> 
+        <url>
+           https://www.allmusic.com/album/greatest-mw0000649878
+        </url>
+    </album_info>
+    <release_date > 
+    13, December 1977
+    </release_date>
+    <genre>Disco</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://cdn-s3.allmusic.com/release-covers/500/0004/563/0004563035.jpg]]></url>
+    </album_art>
+    <name>Faded</name>
+    <artist>Alan Walker</artist>
+    <artist_site>
+        <description>Alan Walker's Website</description> 
+        <url>
+            https://alanwalker.no
+        </url>
+    </artist_site>
+    <album>Faded</album>
+    <album_info>
+        <description>Faded</description> 
+        <url>
+            https://www.allmusic.com/album/faded-mw0002913290
+        </url>
+    </album_info>
+    <release_date > 
+    4, December 2015
+    </release_date>
+    <genre>Electronic Pop/Rock</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=1BJSAEsTfTyCZBig2ublZ9_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
+    </album_art>
+    <name>STAY</name>
+    <artist>Blackpink</artist>
+    <artist_site>
+        <description>Blackpink's Website</description> 
+        <url>
+            https://shop.blackpinkmusic.com
+        </url>
+    </artist_site>
+    <album>Blackpink</album>
+    <album_info>
+        <description>Blackpink</description> 
+        <url>
+            https://www.allmusic.com/album/blackpink-mw0003105130
+        </url>
+    </album_info>
+    <release_date > 
+    30, August 2017
+    </release_date>
+    <genre>K-pop, Asian Pop</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=2koPax99eNrOSqusaAvLph_TZlp6n_cq-Emr2zx15tU=&f=5]]></url>
+    </album_art>
+    <name>Ricky Ricardo</name>
+    <artist>KAPTN</artist>
+    <artist_site>
+        <description>KAPTN's Website</description> 
+        <url>
+            https://open.spotify.com/artist/0uYtAzdxQVWpfAxQeNYCHN
+        </url>
+    </artist_site>
+    <album>Jauzzi Blues, the Interlude</album>
+    <album_info>
+        <description>Jauzzi Blues, the Interlude</description> 
+        <url>
+            https://www.allmusic.com/album/ricky-ricardo-mw0002556412
+        </url>
+    </album_info>
+    <release_date > 
+    21, June 2013
+    </release_date>
+    <genre>Hip-Hop/Rap</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=LbB5o034ycRfhEd2CsSolwSijaXJlYnq0St31qpAJWo=&f=5]]></url>
+    </album_art>
+    <name>Ocean Man</name>
+    <artist>Ween</artist>
+    <artist_site>
+        <description>Ween's website</description> 
+        <url>
+            https://ween.com/ 
+        </url>
+    </artist_site>
+    <album>The Mollusk</album>
+    <album_info>
+        <description>The Mollusk</description> 
+        <url>
+            https://www.allmusic.com/album/the-mollusk-mw0000023211
+        </url>
+    </album_info>
+    <release_date > 
+    24, June 1997
+    </release_date>
+    <genre>Alternative Rock</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=LtRQbKKls3CkiTqTqdyINhyhM-OFI8zG4l-qVpXXB1I=&f=5]]></url>
+    </album_art>
+    <name>Preacher</name>
+    <artist>OneRepublic</artist>
+    <artist_site>
+        <description>OneRepublic's website</description> 
+        <url>
+            https://onerepublic.com
+        </url>
+    </artist_site>
+    <album>Native</album>
+    <album_info>
+        <description>Native</description> 
+        <url>
+            https://www.allmusic.com/album/native-mw0002484790
+        </url>
+    </album_info>
+    <release_date > 
+    22, March 2013
+    </release_date>
+    <genre>Pop/Rock</genre>
+</song>
+<song>
+    <album_art>
+    <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=B-hvHxFCUzbfrwNlRHA2ySpQg_7iAU1wjqLgK_xGXts=&f=5]]></url>
+    </album_art>
+    <name>The Shape Of My Heart</name>
+    <artist>Sting</artist>
+    <artist_site>
+        <description>Sting's website</description> 
+        <url>
+            https://www.sting.com/
+        </url>
+    </artist_site>
+    <album>Ten Summoner's Tale</album>
+    <album_info>
+        <description>Ten Summoner's Tale</description> 
+        <url>
+            https://www.allmusic.com/album/ten-summoners-tales-mw0000094858
+        </url>
+    </album_info>
+    <release_date > 
+    9, March 1993
+    </release_date>
+    <genre>Pop/Rock</genre>
+</song>
+</songs>
