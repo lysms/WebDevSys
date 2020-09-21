@@ -3,6 +3,7 @@
 <songs>
 <song>
     <album_art>
+    <description>Recipe For Hate Album Art</description> 
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=huKFPlUndVNPG4A4IpnwJd_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
     </album_art>
     <name>Don't Pray On Me</name>
@@ -27,6 +28,7 @@
 </song>
 <song>
     <album_art>
+    <description>Skeletal Lamping Album Art</description> 
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=xs8WO226DgnifjYe72pslByhM-OFI8zG4l-qVpXXB1I=&f=5]]></url>
     </album_art>
     <name>An Eluardian Instance</name>
@@ -51,6 +53,7 @@
 </song>
 <song>
     <album_art>
+    <description>Sheer Heart Attack Album Art</description> 
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=55s1w7kJqto6al-_jYk7S9_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
     </album_art>
     <name>Killer Queen</name>
@@ -75,6 +78,7 @@
 </song>
 <song>
     <album_art>
+    <description>Greatest Album Art</description> 
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=xVK0dS5isz4ZNY5rGlkviw4Q1ghY8VaPylnm7PwcKNY=&f=5]]></url>
     </album_art>
     <name>Stayin' Alive</name>
@@ -85,9 +89,9 @@
             https://www.beegees.com/
         </url>
     </artist_site>
-    <album>Staying Alive</album>
+    <album>Greatest</album>
     <album_info>
-        <description>Staying Alive</description> 
+        <description>Greatest</description> 
         <url>
            https://www.allmusic.com/album/greatest-mw0000649878
         </url>
@@ -99,6 +103,7 @@
 </song>
 <song>
     <album_art>
+    <description>Greatest Album Art</description> 
     <url><![CDATA[https://cdn-s3.allmusic.com/release-covers/500/0004/563/0004563035.jpg]]></url>
     </album_art>
     <name>Faded</name>
@@ -123,6 +128,7 @@
 </song>
 <song>
     <album_art>
+    <description>STAY Album Art</description> 
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=1BJSAEsTfTyCZBig2ublZ9_M69_UI9rrJSVvWL2-yAg=&f=5]]></url>
     </album_art>
     <name>STAY</name>
@@ -147,6 +153,7 @@
 </song>
 <song>
     <album_art>
+    <description>Jauzzi Blues, the Interlude Album Art</description> 
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=2koPax99eNrOSqusaAvLph_TZlp6n_cq-Emr2zx15tU=&f=5]]></url>
     </album_art>
     <name>Ricky Ricardo</name>
@@ -171,6 +178,7 @@
 </song>
 <song>
     <album_art>
+    <description>The Mollusk Album Art</description>
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=LbB5o034ycRfhEd2CsSolwSijaXJlYnq0St31qpAJWo=&f=5]]></url>
     </album_art>
     <name>Ocean Man</name>
@@ -195,6 +203,7 @@
 </song>
 <song>
     <album_art>
+    <description>Native Album Art</description>
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=LtRQbKKls3CkiTqTqdyINhyhM-OFI8zG4l-qVpXXB1I=&f=5]]></url>
     </album_art>
     <name>Preacher</name>
@@ -219,6 +228,7 @@
 </song>
 <song>
     <album_art>
+    <description>Ten Summoner's Tale</description>
     <url><![CDATA[https://rovimusic.rovicorp.com/image.jpg?c=B-hvHxFCUzbfrwNlRHA2ySpQg_7iAU1wjqLgK_xGXts=&f=5]]></url>
     </album_art>
     <name>The Shape Of My Heart</name>

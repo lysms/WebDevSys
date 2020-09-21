@@ -1,14 +1,21 @@
 body{
 	background-image: linear-gradient(tomato, lightblue);
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .song-list{
 	border-style: solid;
 	border-color: DodgerBlue;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 120px;
+	padding-right: 120px;
 }
 .list-end{
+	margin: auto;
 	text-align: center;
 	font-size: smaller;
+	font-style: italic;
 }
 
 .song-data{
@@ -20,14 +27,18 @@ body{
 .genre-data > li:before{
 	content: "- ";
 }
+
 img{
-	width: 200px;
-	padding: 10px;
+	width: 250px;
+	padding-right: 10px;
 	float: right;
 }
+
+
 .song-name{
 	font-variant: small-caps;
 }
+
 .favorite{
 	color: green;
 }
@@ -46,7 +57,8 @@ img{
 	font-size: smaller;
 }
 
-/*section{
-	border-style: solid;
-	border-color: neon;
-}*/
+section{
+	min-height: 300px;
+	border-bottom-style: solid;
+}
+
