@@ -1,0 +1,50 @@
+
+body{
+	background-image: linear-gradient(midnightblue, coral);
+}
+h1{
+	color: lightgoldenrodyellow;
+	font-size: 40px;
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+	color: lightblue;
+}
+
+h3{
+	text-align: center;
+}
+
+img{
+	width: 50%;
+}
+
+figure{
+	display: inline-block;
+}
+
+article{
+	text-align: center;
+}
+
+.project{
+	border-style: solid;
+	display: inline-block;
+	max-width: 30%;
+}
+
+.description{
+	padding: 10px;
+	text-align: left;
+}
+
+#slogan{
+	color: navajowhite;
+	text-align: center;
+}
+
+#images{
+	text-align: center;
+}
