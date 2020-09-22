@@ -1,55 +1,82 @@
+/* added margin left and right to give some space between the edge
+of the screen and the table
+
+additionally added font family to default to Arial and Helvetica
+*/
 body{
 	background-image: linear-gradient(tomato, lightblue);
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+/* adds a border around the list */
 .song-list{
 	border-style: solid;
-	border-color: DodgerBlue;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 120px;
-	padding-right: 120px;
+    border-color: DodgerBlue;
 }
+
+/* centers the end of list text, makes it proportionatelly smaller and italicizes the font*/
 .list-end{
-	margin: auto;
 	text-align: center;
 	font-size: smaller;
 	font-style: italic;
 }
 
+/* sets the "table headers" to bold of 600 and the color of the song headers to white */
+.song-header{
+    font-weight: 600;
+    color: white;
+}
+
+/* fixes the height of each row to be 250px */
 .song-data{
-	list-style-type: none;
+    height: 250px;
 }
+
+/* removes the default list type (.) and overrides the default padding-inline-start 
+(for better formatting) */
 .genre-data{
-	list-style-type: none;
+    list-style-type: none;
+    padding-inline-start: 10px
 }
+
+/* adds a - before each item listed in the ul denoted by class .genre-data */
 .genre-data > li:before{
 	content: "- ";
 }
 
+/* forces the height of each picture to be 200x200 pixels. 
+Additionally adds padding to the right and top of the image */
 img{
-	width: 250px;
-	padding-right: 10px;
-	float: right;
+    height: 200px;
+    width: 200px;
+    padding-right: 10px;
+    padding-top: 3%;
 }
 
-
+/* adds small caps styling to song name */
 .song-name{
 	font-variant: small-caps;
 }
 
+/* favorite song names are colored in green */
 .favorite{
 	color: green;
 }
 
+/* artist name is in bold and 20% greater in size than the default fontsize */
 .artist-name{
 	font-weight: bold;
 	font-size: 120%;
 }
+
+/* italicizes the album */
 .album{
 	font-style: italic;
 }
+
+/* makes release date info proportinately smaller */
 .release-date{
 	font-size: smaller;
 }
@@ -57,8 +84,39 @@ img{
 	font-size: smaller;
 }
 
-section{
-	min-height: 300px;
-	border-bottom-style: solid;
-}
+/* sets the width of the "table" to be 100% the width of the body */
+.grandparent {
+    width: 100%;
+  }
+  
+  /* sets the width of the "table" to be 100% the width of the grandfather and floats columns from the left */
+  .parent {
+    width: 100%;
+	float: left;
+  }
 
+  /* used to style list instances (as they're backgrounds alternate between white and lightblue ) */
+  .odd-column {
+    background-color: white;
+  }
+
+  /* used for the header */
+  .header-background {
+    background-color: rgb(69, 146, 172);
+  }
+  .even-column {
+      background-color: lightblue;
+  }
+  
+  .text-child {
+	width: 11.4%;
+    float: left;
+    height: 100%
+  }
+  
+
+  .img-child {
+	width: 20%;
+    float: left;
+    height: 100%
+  }
