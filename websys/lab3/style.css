@@ -1,50 +1,153 @@
-
-body{
-	background-image: linear-gradient(midnightblue, coral);
-}
-h1{
-	color: lightgoldenrodyellow;
-	font-size: 40px;
-	text-align: center;
+article.whole {
+    background-image: linear-gradient(midnightblue, coral);
 }
 
-h2{
-	text-align: center;
-	color: lightblue;
+h1 {
+    color: lightgoldenrodyellow;
+    font-size: 40px;
+    text-align: center;
 }
 
-h3{
-	text-align: center;
+h2.team {
+    text-align: center;
+    color: lightblue;
 }
 
-img{
-	width: 50%;
+h3.team {
+    text-align: center;
 }
 
-figure{
-	display: inline-block;
+img.team {
+    width: 50%;
 }
 
-article{
-	text-align: center;
+figure {
+    display: inline-block;
 }
 
-.project{
-	border-style: solid;
-	display: inline-block;
-	max-width: 30%;
+article {
+    text-align: center;
 }
 
-.description{
-	padding: 10px;
-	text-align: left;
+.project {
+    border-style: solid;
+    display: inline-block;
+    max-width: 30%;
 }
 
-#slogan{
-	color: navajowhite;
-	text-align: center;
+.description {
+    padding: 10px;
+    text-align: left;
 }
 
-#images{
-	text-align: center;
+#slogan {
+    color: navajowhite;
+    text-align: center;
 }
+
+#images {
+    text-align: center;
+}
+
+
+/* Yanshen's resume*/
+
+#head {
+    background-image: linear-gradient(360deg, white, #CCFFCC);
+}
+
+#head img.liny16 {
+    border-radius: 50%;
+    margin: 0.8em;
+    margin-left: 2em;
+    float: left;
+}
+
+aside.right {
+    box-sizing: border-box;
+    width: 20%;
+    float: right;
+    margin-top: 1em;
+    font-size: 105%;
+    font-style: italic;
+}
+
+aside.left {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+aside.left p.name {
+    font-size: 210%;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+aside.left p.itws {
+    font-size: 140%;
+    color: darkolivegreen;
+    line-height: 0.9em;
+}
+
+p.statement {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 1.2em;
+    padding: 10px;
+    font-size: 102%;
+}
+
+section.exp {
+    box-sizing: border-box;
+    width: 45%;
+    margin: 1.3em;
+    padding: 2px;
+    float: left;
+}
+
+h2.h2 {
+    border-bottom: 2px darkgreen solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+h4.h4 {
+    color: green;
+    padding-left: 10px;
+    margin-top: -0.5em;
+}
+
+ul.ul {
+    list-style-position: inside;
+    list-style: square;
+    font-size: 110%;
+    line-height: 1.5;
+}
+
+div.div {
+    margin-top: 1.4em;
+    margin-left: 1em;
+}
+
+section.skills {
+    box-sizing: border-box;
+    width: 48%;
+    margin: 1.3em;
+    float: right;
+}
+
+ul.skill li {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 5px;
+    color: white;
+    background: #006633;
+}
+
+
+/* End Yanshen's Resume CSS */
