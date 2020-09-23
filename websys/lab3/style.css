@@ -154,7 +154,7 @@ ul.skill li {
 
 /* Yuhao Wang's Additional style*/
 #head2 {
-    background-image: linear-gradient(360deg, white, #CCFFCC);
+    background: linear-gradient(90deg, rgba(9,121,65,1) 2%, rgba(246,246,251,0.7371323529411764) 26%, rgba(0,202,255,1) 97%);
 }
 
 #head2 img.Yuhao {
@@ -162,5 +162,14 @@ ul.skill li {
     margin: 0.8em;
     margin-left: 2em;
     float: left;
+}
+
+section.exp2 {
+    box-sizing: border-box;
+    width: 45%;
+    margin: 1.3em;
+    padding: 2px;
+    float: left;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 /* End Yuhao's Additional */
