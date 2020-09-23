@@ -166,12 +166,12 @@ body.whole{
     background: linear-gradient(90deg, rgba(9, 121, 65, 1) 2%, rgba(246, 246, 251, 0.7371323529411764) 26%, rgba(0, 202, 255, 1) 97%);
 }
 
+/* Yuhao Wang's self-photo style*/
 #head2 img.Yuhao {
-    margin: 0.8em;
-    margin-left: 2em;
     float: left;
+    border-radius: 50%;
 }
-
+/* Yuhao Wang's work experience section style*/
 section.exp2 {
     box-sizing: border-box;
     width: 45%;
@@ -181,6 +181,7 @@ section.exp2 {
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
+/* Yuhao Wang's work image style*/
 img.Yuhao2 {
     display: block;
     margin-left: auto;
@@ -188,6 +189,7 @@ img.Yuhao2 {
 
 }
 
+/* Yuhao Wang's skills style*/
 section.skills2 {
     box-sizing: border-box;
     width: 48%;
@@ -196,12 +198,39 @@ section.skills2 {
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(240,6,242,1) 100%);
 }
 
+/* Yuhao Wang's skill item style*/
 ul.skill2 li {
     display: inline-block;
     margin: 0.5em;
     padding: 5px;
-    color: white;
+    color: red;
     background: rgb(238,174,202);
+}
+
+
+/* Here is for the rainbow circle*/
+.outer-circle {
+   margin: auto;
+  position: relative;
+  height: 350px;
+  width: 350px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+}
+
+/* Here is for the inner context*/
+#inner-circle{
+    text-align: center;
+    padding-top: 2em;
+}
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 /* End Yuhao's Additional */
