@@ -203,9 +203,7 @@ section.skills2 {
     counter-reset: list-counter;
     list-style: none;
 }
-.circle li{
-    margin: 1.5em 0;    
-}
+
 .circle li:before{
     content: counter(list-counter);
     counter-increment: list-counter;
