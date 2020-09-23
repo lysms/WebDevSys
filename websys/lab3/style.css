@@ -151,3 +151,16 @@ ul.skill li {
 
 
 /* End Yanshen's Resume CSS */
+
+/* Yuhao Wang's Additional style*/
+#head2 {
+    background-image: linear-gradient(360deg, white, #CCFFCC);
+}
+
+#head2 img.Yuhao {
+    border-radius: 50%;
+    margin: 0.8em;
+    margin-left: 2em;
+    float: left;
+}
+/* End Yuhao's Additional */
