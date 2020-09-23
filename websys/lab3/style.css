@@ -235,10 +235,12 @@ section.skills2 {
 }
 
 /* Here is for the inner context*/
-#inner-circle{
-    text-align: center;
+#inner-circle {
+    margin: auto;
     padding-top: 2em;
+    text-align: center;
 }
+
 @keyframes rotate {
   0% {
     filter: hue-rotate(0deg);
