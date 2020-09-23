@@ -153,12 +153,20 @@ ul.skill li {
 /* End Yanshen's Resume CSS */
 
 /* Yuhao Wang's Additional style*/
+body.whole{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.name2{
+    font-family: Impact, Charcoal, sans-serif
+    font-size: large;
+}
+
 #head2 {
-    background: linear-gradient(90deg, rgba(9,121,65,1) 2%, rgba(246,246,251,0.7371323529411764) 26%, rgba(0,202,255,1) 97%);
+    background: linear-gradient(90deg, rgba(9, 121, 65, 1) 2%, rgba(246, 246, 251, 0.7371323529411764) 26%, rgba(0, 202, 255, 1) 97%);
 }
 
 #head2 img.Yuhao {
-    border-radius: 50%;
     margin: 0.8em;
     margin-left: 2em;
     float: left;
@@ -170,6 +178,30 @@ section.exp2 {
     margin: 1.3em;
     padding: 2px;
     float: left;
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
+
+img.Yuhao2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+section.skills2 {
+    box-sizing: border-box;
+    width: 48%;
+    margin: 1.3em;
+    float: right;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(240,6,242,1) 100%);
+}
+
+ul.skill2 li {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 5px;
+    color: white;
+    background: rgb(238,174,202);
+}
+
 /* End Yuhao's Additional */
