@@ -8,17 +8,18 @@ h1 {
     text-align: center;
 }
 
-h2.team {
+h2.index {
     text-align: center;
     color: lightblue;
 }
 
-h3.team {
+h3.index {
     text-align: center;
 }
 
-img.team {
-    width: 50%;
+img.index {
+    width: 60%;
+    max-width: 300px;
 }
 
 figure {
