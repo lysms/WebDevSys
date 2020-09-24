@@ -153,12 +153,14 @@ ul.skill li {
 
 /* End Yanshen's Resume CSS */
 
+
 /* Yuhao Wang's Additional style*/
-body.whole{
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+body.whole {
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
-.name2{
+.name2 {
     font-family: Impact, Charcoal, sans-serif;
     font-size: large;
 }
@@ -167,12 +169,17 @@ body.whole{
     background: linear-gradient(90deg, rgba(9, 121, 65, 1) 2%, rgba(246, 246, 251, 0.7371323529411764) 26%, rgba(0, 202, 255, 1) 97%);
 }
 
+
 /* Yuhao Wang's self-photo style*/
+
 #head2 img.Yuhao {
     float: left;
     border-radius: 50%;
 }
+
+
 /* Yuhao Wang's work experience section style*/
+
 section.exp2 {
     box-sizing: border-box;
     width: 45%;
@@ -182,30 +189,35 @@ section.exp2 {
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
+
 /* Yuhao Wang's work image style*/
+
 img.Yuhao2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
+
 /* Yuhao Wang's skills style*/
+
 section.skills2 {
     box-sizing: border-box;
     width: 48%;
     margin: 1.3em;
     float: right;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(240,6,242,1) 100%);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(240, 6, 242, 1) 100%);
 }
 
+
 /* Yuhao Wang's skill item style*/
-.circle{
+
+.circle {
     counter-reset: list-counter;
     list-style: none;
 }
 
-.circle li:before{
+.circle li:before {
     content: counter(list-counter);
     counter-increment: list-counter;
     width: 1em;
@@ -220,22 +232,24 @@ section.skills2 {
     font-weight: bold;
     text-align: center;
     display: inline-block;
-    
 }
 
 
 /* Here is for the rainbow circle*/
+
 .outer-circle {
-   margin: auto;
-  position: relative;
-  height: 350px;
-  width: 350px;
-  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-  border-radius: 50%;
-  animation: rotate 1.5s linear infinite;
+    margin: auto;
+    position: relative;
+    height: 350px;
+    width: 350px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 50%;
+    animation: rotate 1.5s linear infinite;
 }
 
+
 /* Here is for the inner context*/
+
 .inner-circle {
     margin: auto;
     padding-top: 2em;
@@ -243,12 +257,13 @@ section.skills2 {
 }
 
 @keyframes rotate {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-  }
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
+
 
 /* End Yuhao's Additional */
