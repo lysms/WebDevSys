@@ -14,6 +14,11 @@ h1 {
 	font-variant: small-caps;
 }
 
+.icon {
+	width: 1%;
+	height: 1%;
+}
+
 #pic {
 	display: block;
 	margin-left: auto;
