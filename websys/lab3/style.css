@@ -1,0 +1,269 @@
+body#index {
+    background-image: linear-gradient(midnightblue, coral);
+}
+
+h1 {
+    color: lightgoldenrodyellow;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2.index {
+    text-align: center;
+    color: lightblue;
+}
+
+h3.index {
+    text-align: center;
+}
+
+img.index {
+    width: 60%;
+    max-width: 300px;
+}
+
+figure {
+    display: inline-block;
+}
+
+article {
+    text-align: center;
+}
+
+.project {
+    border-style: solid;
+    display: inline-block;
+    max-width: 30%;
+}
+
+.description {
+    padding: 10px;
+    text-align: left;
+}
+
+#slogan {
+    color: navajowhite;
+    text-align: center;
+}
+
+#images {
+    text-align: center;
+}
+
+
+/* Yanshen's resume*/
+
+#head {
+    background-image: linear-gradient(360deg, white, #CCFFCC);
+}
+
+#head img.liny16 {
+    border-radius: 50%;
+    margin: 0.8em;
+    margin-left: 2em;
+    float: left;
+}
+
+aside.right {
+    box-sizing: border-box;
+    width: 15%;
+    float: right;
+    margin-top: 1em;
+    font-size: 115%;
+    line-height: 1.4em;
+}
+
+aside.left {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+aside.left span.fn {
+    font-size: 210%;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+p.itws {
+    font-size: 140%;
+    color: darkolivegreen;
+    line-height: 0.9em;
+}
+
+p.statement {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 1.2em;
+    padding: 10px;
+    font-size: 102%;
+}
+
+section.exp {
+    box-sizing: border-box;
+    width: 45%;
+    margin: 1.3em;
+    padding: 2px;
+    float: left;
+}
+
+h2.h2 {
+    border-bottom: 2px darkgreen solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+h4.h4 {
+    color: green;
+    padding-left: 10px;
+    margin-top: -0.5em;
+}
+
+ul.ul {
+    list-style-position: inside;
+    list-style: square;
+    font-size: 110%;
+    line-height: 1.5;
+}
+
+div.div {
+    margin-top: 1.4em;
+    margin-left: 1em;
+}
+
+section.skills {
+    box-sizing: border-box;
+    width: 48%;
+    margin: 1.3em;
+    float: right;
+}
+
+ul.skill li {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 5px;
+    color: white;
+    background: #006633;
+}
+
+
+/* End Yanshen's Resume CSS */
+
+
+/* Yuhao Wang's Additional style*/
+
+body.whole {
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.name2 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: large;
+}
+
+#head2 {
+    background: linear-gradient(90deg, rgba(9, 121, 65, 1) 2%, rgba(246, 246, 251, 0.7371323529411764) 26%, rgba(0, 202, 255, 1) 97%);
+}
+
+
+/* Yuhao Wang's self-photo style*/
+
+#head2 img.Yuhao {
+    float: left;
+    border-radius: 50%;
+}
+
+
+/* Yuhao Wang's work experience section style*/
+
+section.exp2 {
+    box-sizing: border-box;
+    width: 45%;
+    margin: 1.3em;
+    padding: 2px;
+    float: left;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+
+/* Yuhao Wang's work image style*/
+
+img.Yuhao2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Yuhao Wang's skills style*/
+
+section.skills2 {
+    box-sizing: border-box;
+    width: 48%;
+    margin: 1.3em;
+    float: right;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(240, 6, 242, 1) 100%);
+}
+
+
+/* Yuhao Wang's skill item style*/
+
+.circle {
+    counter-reset: list-counter;
+    list-style: none;
+}
+
+.circle li:before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    width: 1em;
+    height: 1em;
+    padding: .5em;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: .25em solid #ccc;
+    background: #000;
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+
+/* Here is for the rainbow circle*/
+
+.outer-circle {
+    margin: auto;
+    position: relative;
+    height: 350px;
+    width: 350px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 50%;
+    animation: rotate 1.5s linear infinite;
+}
+
+
+/* Here is for the inner context*/
+
+.inner-circle {
+    margin: auto;
+    padding-top: 2em;
+    text-align: center;
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+/* End Yuhao's Additional */
