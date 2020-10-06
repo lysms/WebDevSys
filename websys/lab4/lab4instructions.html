@@ -1,46 +1,40 @@
 <!doctype html>
 <html class="root-html">
-
 <head class="html root-head">
-    <title class="head">Lab 4</title>
-    <link class="head" rel="stylesheet " href="lab4Solution.css " />
+  <title class="head">Lab 4</title>
+  <link  class="head" rel=stylesheet href="lab4Solution.css"/>
 </head>
-
-<body class="html root-body ">
-    <h1 class="body ">Lab #4 - JavaScript and the Document Object Model</h1>
-    <pre id="info " class="body ">Lab #4 - JavaScript and the Document Object Model</pre>
-    <pre id="part1b " class="body ">Lab #4 - JavaScript and the Document Object Model</pre>
-    <div class="body root-div0 ">
-        <h2 class="div0 ">Part 0: Setup</h2>
-        <p class="div0 ">Create a new folder for lab4, and confirm that it is being served by Apache. You may choose to serve this lab from a new virtual host, though doing so is not required to receive credit.</p>
-        <p class="div0 root-p0
-        ">Ensure that you have a browser plugin capable of debugging JavaScript (you should be familiar with setting breakpoints and watch variables from your previous CS/IT courses). If you are stuck with this, review the help for <a class="p0 " href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging ">Debugging JavaScript using Developer Tools for Chrome</a>            as they are an excellent tool to learn with.</p>
-        <p class="div0 root-p1 ">For this lab, you will be using <a class="p1 " href="Lab 4 instructions.html ">an existing HTML document</a>. Save the document as lab4.html in your lab4 folder.</p>
-    </div>
-    <div class="body root-div1 ">
-        <h2 class="div1 ">Part 1: Iterating through the DOM</h2>
-        <p class="div1 ">Create the file lab4.js and use a &lt;script&gt; tag to reference it from your document.</p>
-        <p class="div1 root-p2 ">Write a JavaScript function that iterates through the DOM of your document. For each <a class="p2 " href="http://www.w3schools.com/jsref/dom_obj_document.asp ">Element node</a> starting with the &lt;html&gt; element, recursively print the name
-            of each node in the tree in a text-based format, prefixing each item with a dash for each additional layer of depth. Newlines are escaped via \n.</p>
-        <p class="div1 ">The first few lines should look something like this:</p>
-        <p class="div1 root-p6 ">html<br class="p6 " />-head<br class="p6 " />--title<br class="p6 " />-body</p>
-        <p class="div1 ">Finally, replace the innerHTML of the element with the id &quot;info&quot; with the return value of this function.</p>
-        <p class="div1 root-p3 "><strong class="p3 ">To receive credit for Part 1:</strong> Show that your code iterates through the DOM and replaces the contents of #info with the resulting tree.</p>
-    </div>
-    <div class="body root-div2 ">
-        <h2 class="div2 ">Part 2: Event Listeners &amp; Event Bubbling</h2>
-        <p class="div2 ">Modify your function in Part 1 to add an onclick event listener to each element in the body. The function bound to this event listener should display an alert box with the element's tag name.</p>
-        <p class="div2 ">Note that there is a much more performant way of doing this; we will discuss how in another lecture.</p>
-        <p class="div2 root-p4 "><strong class="p4 ">To receive credit for Part 2:</strong> Show how the onclick event bubbles through the DOM.</p>
-    </div>
-    <div class="body root-div3 ">
-        <h2 class="div3 ">Part 3: CSS Manipulation</h2>
-        <p class="div3 ">First, once the page has finished loading, copy your favorite quote (or some other text) to the end of the body using the cloneNode() and appendChild() methods on the appropriate Element objects.</p>
-        <p class="div3 ">Bind new onmouseover event listeners to each div (including the one you just copied), and in the function change the element's background color and move the element 10px to the right. For the onmouseout event for each element, change the background
-            color back to white and reposition the element to its original location.</p>
-        <p class="div3 root-p5 "><strong class="p5 ">To receive credit for Part 3:</strong> Demonstrate that your onmouseout and onmouseover listeners fire correctly.</p>
-    </div>
-    <script class="body " src="lab4.js "></script>
+<body class="html root-body">
+  <h1 class="body">Lab #4 - JavaScript and the Document Object Model</h1>
+  <pre id="info" class="body">Lab #4 - JavaScript and the Document Object Model</pre>
+  <pre id="part1b" class="body">Lab #4 - JavaScript and the Document Object Model</pre>
+  <div class="body root-div0">
+    <h2 class="div0">Part 0: Setup</h2>
+    <p class="div0">Create a new folder for lab4, and confirm that it is being served by Apache. You may choose to serve this lab from a new virtual host, though doing so is not required to receive credit.</p>
+    <p class="div0 root-p0">Ensure that you have a browser plugin capable of debugging JavaScript (you should be familiar with setting breakpoints and watch variables from your previous CS/IT courses). If you are stuck with this, review the help for <a class="p0" href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging">Debugging JavaScript using Developer Tools for Chrome</a> as they are an excellent tool to learn with.</p>
+    <p class="div0 root-p1">For this lab, you will be using <a class="p1" href="Lab 4 instructions.html">an existing HTML document</a>. Save the document as lab4.html in your lab4 folder.</p>
+  </div>
+  <div class="body root-div1">
+    <h2 class="div1">Part 1: Iterating through the DOM</h2>
+    <p class="div1">Create the file lab4.js and use a &lt;script&gt; tag to reference it from your document.</p>
+    <p class="div1 root-p2">Write a JavaScript function that iterates through the DOM of your document. For each <a class="p2" href="http://www.w3schools.com/jsref/dom_obj_document.asp">Element node</a> starting with the &lt;html&gt; element, recursively print the name of each node in the tree in a text-based format, prefixing each item with a dash for each additional layer of depth. Newlines are escaped via \n.</p>
+    <p class="div1">The first few lines should look something like this:</p> 
+    <p class="div1 root-p6">html<br class="p6"/>-head<br class="p6"/>--title<br class="p6"/>-body</p>
+    <p class="div1">Finally, replace the innerHTML of the element with the id &quot;info&quot; with the return value of this function.</p>
+    <p class="div1 root-p3"><strong class="p3">To receive credit for Part 1:</strong> Show that your code iterates through the DOM and replaces the contents of #info with the resulting tree.</p>
+  </div>
+  <div class="body root-div2">
+    <h2 class="div2">Part 2: Event Listeners &amp; Event Bubbling</h2>
+    <p class="div2">Modify your function in Part 1 to add an onclick event listener to each element in the body. The function bound to this event listener should display an alert box with the element's tag name.</p>
+    <p class="div2">Note that there is a much more performant way of doing this; we will discuss how in another lecture.</p>
+    <p class="div2 root-p4"><strong class="p4">To receive credit for Part 2:</strong> Show how the onclick event bubbles through the DOM.</p>
+  </div>
+  <div class="body root-div3">
+    <h2 class="div3">Part 3: CSS Manipulation</h2>
+    <p class="div3">First, once the page has finished loading, copy your favorite quote (or some other text) to the end of the body using the cloneNode() and appendChild() methods on the appropriate Element objects.</p>
+    <p class="div3">Bind new onmouseover event listeners to each div (including the one you just copied), and in the function change the element's background color and move the element 10px to the right. For the onmouseout event for each element, change the background color back to white and reposition the element to its original location.</p>
+    <p class="div3 root-p5"><strong class="p5">To receive credit for Part 3:</strong> Demonstrate that your onmouseout and onmouseover listeners fire correctly.</p>
+  </div>
+  <script class = "body" src="lab4.js"></script>
 </body>
-
 </html>
