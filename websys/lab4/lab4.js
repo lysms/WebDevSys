@@ -1,9 +1,14 @@
-
-function getOutlinePartA(element, numDashes){
+function getOutlinePartA(element, numDashes, inBody){
+	if(inBody) {
+		element.setAttribute("onclick", "alertBox(this)");
+	}
+	if(element.tagName == "BODY") {
+		inBody = true;	
+	}
     let children = element.children;
     var result = "-".repeat(numDashes) + element.tagName + "\n";
     for(var i = 0; i < children.length; i++){
-        result += getOutlinePartA(children[i], numDashes+1);
+        result += getOutlinePartA(children[i], numDashes+1, inBody);
         result = result.toLowerCase();
     }
     return result;
@@ -31,7 +36,7 @@ function getOutlinePartB(classname, depth, name){
 }
 
 function placeOutlinePartA(){
-   let outline = getOutlinePartA(document.getElementsByTagName("html")[0], 0);
+   let outline = getOutlinePartA(document.getElementsByTagName("html")[0], 0, false);
    document.querySelector("#info").innerHTML = outline;
 }
 
@@ -39,6 +44,10 @@ function placeOutlinePart1B(){
     let outline = getOutlinePartB("html",0, "html");
     document.querySelector("#part1b").innerHTML = outline;
  }
+
+function alertBox(obj) {
+	alert(obj.tagName);	
+}
 
 placeOutlinePartA()
 
