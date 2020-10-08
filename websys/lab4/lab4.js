@@ -49,7 +49,46 @@ function alertBox(obj) {
 	alert(obj.tagName);	
 }
 
+function lab4Part3Quote() {
+	var myNode = document.getElementsByClassName("root-div1")[0];
+//	var quote = "When the light turns green, you go. When the light turns red, you stop. But what do you do when the light turns blue with orange and lavender spots? - Shel Silverstein"
+//	var code = document.getElementsByTagName("DIV")[0];
+	var cln = myNode.cloneNode(true);
+	cln.innerHTML = '"When the light turns green, you go. When the light turns red, you stop. But what do you do when the light turns blue with orange and lavender spots?" - Shel Silverstein' 
+	cln.setAttribute("id", "quote");
+	document.body.appendChild(cln);
+}
+
+function lab4Part3Mouse() {
+	var nodes = document.getElementsByTagName("DIV");
+	for(var i = 0; i < nodes.length; i++) {
+		nodes[i].addEventListener("mouseover",function(){
+			this.style.background = "#f00";
+			this.style["margin-left"] = "10px";
+		});
+		nodes[i].addEventListener("mouseout",function(){
+			this.style.background = "#fff";
+			this.style["margin-left"] = "0px";
+		});
+	}
+}
+
+function mouseOver(className) {
+	className = className.replace(" ", ".");
+	console.log(className);
+	document.querySelector("." + className).style.backgroundColor = "red";	
+}
+
+function mouseOut(className) {
+	className = className.replace(" ", ".");
+	console.log(className);
+	document.querySelector("." + className).style.backgroundColor = "white";	
+}
+
 placeOutlinePartA()
 
 placeOutlinePart1B()
 
+lab4Part3Quote()
+
+lab4Part3Mouse()
