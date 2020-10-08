@@ -24,8 +24,6 @@ function getRootName(classname){
 
 function getOutlinePartB(classname, depth, name){
     let children = document.getElementsByClassName(classname);
-    console.log(classname);
-    console.log(children);
     var result = "-".repeat(depth) + name + "\n";
     for(var i = 0; i < children.length; i++){
         const rootName = getRootName(children[i].className)
@@ -51,8 +49,6 @@ function alertBox(obj) {
 
 function lab4Part3Quote() {
 	var myNode = document.getElementsByClassName("root-div1")[0];
-//	var quote = "When the light turns green, you go. When the light turns red, you stop. But what do you do when the light turns blue with orange and lavender spots? - Shel Silverstein"
-//	var code = document.getElementsByTagName("DIV")[0];
 	var cln = myNode.cloneNode(true);
 	cln.innerHTML = '"When the light turns green, you go. When the light turns red, you stop. But what do you do when the light turns blue with orange and lavender spots?" - Shel Silverstein' 
 	cln.setAttribute("id", "quote");
@@ -71,18 +67,6 @@ function lab4Part3Mouse() {
 			this.style["margin-left"] = "0px";
 		});
 	}
-}
-
-function mouseOver(className) {
-	className = className.replace(" ", ".");
-	console.log(className);
-	document.querySelector("." + className).style.backgroundColor = "red";	
-}
-
-function mouseOut(className) {
-	className = className.replace(" ", ".");
-	console.log(className);
-	document.querySelector("." + className).style.backgroundColor = "white";	
 }
 
 placeOutlinePartA()
