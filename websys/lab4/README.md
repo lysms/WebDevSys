@@ -22,4 +22,4 @@ Yuhao Wang (wangy63)
 
 Yanshen Lin (liny16)
 	- I add the color border animation around the div tag. Which is changing during the 6s. Enhance the color of the webpage, and you will not be so bored.
-
+	- I also added some css for the button tag. Made it look more funny. 
