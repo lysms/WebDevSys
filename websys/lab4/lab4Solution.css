@@ -17,7 +17,7 @@ div{
 @keyframes mymove{
     0%{
         border-top: 5px skyblue solid;
-        border-right: 5px skyblue dashed;
+        border-right: 5px skyblue double;
         border-left: 5px skyblue groove;
         border-bottom: 5px skyblue double;
         height: 100%;
@@ -25,28 +25,28 @@ div{
     }
     25%{
         border-top: 5px lightgreen solid;
-        border-right: 5px lightgreen  dashed;
+        border-right: 5px lightgreen  double;
         border-left: 5px lightgreen groove;
         border-bottom: 5px  lightgreen double;
         height: 100%;
     }
     50%{
         border-top: 5px #546de5 solid;
-        border-right: 5px #546de5 dashed;
+        border-right: 5px #546de5 double;
         border-left: 5px #546de5 groove;
         border-bottom: 5px #546de5 double;
         height: 100%;
     }
     75%{
         border-top: 5px orange solid;
-        border-right: 5px orange dashed;
+        border-right: 5px orange double;
         border-left: 5px orange groove;
         border-bottom: 5px orange double;
         height: 100%;
     }
     100%{
         border-top: 5px #f78fb5 solid;
-        border-right: 5px#f78fb5 dashed;
+        border-right: 5px#f78fb5 double;
         border-left: 5px #f78fb5 groove;
         border-bottom: 5px #f78fb5 double;
         height: 100%;
@@ -55,4 +55,22 @@ div{
 
 h2{
     text-align: center;
+}
+
+button{
+    display: block;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-right: auto;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    line-height: 1.2em;
+    font-family: monospace;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    border: solid 2px; 
+    border-radius: 35px;
+    color: white;
+    background: linear-gradient(90deg,#0984e3,#a29bfe) ;
 }
