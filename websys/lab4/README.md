@@ -1,5 +1,7 @@
 # Lab 4
 
+Team: LingoLand
+
 Team Members:
 Yuhao Wang
 Kristofer Kwan
