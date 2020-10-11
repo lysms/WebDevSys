@@ -59,7 +59,8 @@ function lab4Part3Mouse() {
     var nodes = document.getElementsByTagName("DIV");
     for (var i = 0; i < nodes.length; i++) {
         nodes[i].addEventListener("mouseover", function() {
-            this.style.background = "#f00";
+            let randColor = Math.floor((Math.random() * 360));
+            this.style.background = "hsl("+randColor+", 100%, 50%)";
             this.style["margin-left"] = "10px";
         });
         nodes[i].addEventListener("mouseout", function() {
