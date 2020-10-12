@@ -11,13 +11,13 @@
   <div class="body root-div0">
     <h2 class="div0">Part 0: Setup</h2>
     <p class="div0">Create a new folder for lab4, and confirm that it is being served by Apache. You may choose to serve this lab from a new virtual host, though doing so is not required to receive credit.</p>
-    <p class="div0 root-p0">Ensure that you have a browser plugin capable of debugging JavaScript (you should be familiar with setting breakpoints and watch variables from your previous CS/IT courses). If you are stuck with this, review the help for <a class="p0" href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging">Debugging JavaScript using Developer Tools for Chrome</a> as they are an excellent tool to learn with.</p>
+    <p class="div0 root-p0">Ensure that you have a browser plugin capable of debugging JavaScript (you should be familiar with setting breakpoints and watch variables from your previous CS/IT courses). If you are stuck with this, review the help for <a class="p0" target="_blank" href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging">Debugging JavaScript using Developer Tools for Chrome</a> as they are an excellent tool to learn with.</p>
     <p class="div0 root-p1">For this lab, you will be using <a class="p1" href="Lab 4 instructions.html">an existing HTML document</a>. Save the document as lab4.html in your lab4 folder.</p>
   </div>
   <div class="body root-div1">
     <h2 class="div1">Part 1: Iterating through the DOM</h2>
     <p class="div1">Create the file lab4.js and use a &lt;script&gt; tag to reference it from your document.</p>
-    <p class="div1 root-p2">Write a JavaScript function that iterates through the DOM of your document. For each <a class="p2" href="http://www.w3schools.com/jsref/dom_obj_document.asp">Element node</a> starting with the &lt;html&gt; element, recursively print the name of each node in the tree in a text-based format, prefixing each item with a dash for each additional layer of depth. Newlines are escaped via \n.</p>
+    <p class="div1 root-p2">Write a JavaScript function that iterates through the DOM of your document. For each <a class="p2" target="_blank" href="http://www.w3schools.com/jsref/dom_obj_document.asp">Element node</a> starting with the &lt;html&gt; element, recursively print the name of each node in the tree in a text-based format, prefixing each item with a dash for each additional layer of depth. Newlines are escaped via \n.</p>
     <p class="div1">The first few lines should look something like this:</p> 
     <p class="div1 root-p6">html<br class="p6"/>-head<br class="p6"/>--title<br class="p6"/>-body</p>
     <p class="div1">Finally, replace the innerHTML of the element with the id &quot;info&quot; with the return value of this function.</p>

@@ -46,3 +46,7 @@ Sam Avis (aviss)
 Kristofer Kwan (kwank2)
 - changed the border radius of each individual div tag
 - added some box shadowing to make the individual blocks stick out a bit more (basically I made cards per each part of the lab documented on the webpage) 
+
+Philip Chang
+- added so that the button's cursor would change into a pointer while hovering over it
+- made it so that the when the "Element node" and "Debugging Javascript using Developer Tools for Chrome" are clicked, they open up in a new tab rather than in the current one
