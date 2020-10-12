@@ -26,7 +26,7 @@ For Part 1b, we utilized the same recursive structure as Part1a to iterate thoug
 The onclick event bubbles through the DOM because it is applied to every element as the recursive function goes through the DOM's tree structure depth-first. We also had to add another parameter to the function that kept track of if the current element was in the body. Without the use of JQuery, we had to apply the new attribute to each individual DOM object that fit the given parameter of being in the body, checking each node of the DOM tree individually.
 
 ## Part3:
-We apply two important methods (appendchild() and clonenode()) which are required for this part. The cloneNode() method creates a copy of a node, and returns the clone. The appendChild() method appends a node as the last child of a node. We first clone the "root-div" as a node then append the node the big body container with id named "quote". In addition for mouse events, we use addEventListner methods by iterating all div we want to change the color when our mouse is over or not.
+We apply two important methods (appendchild() and clonenode()) which are required for this part. The cloneNode() method creates a copy of a node, and returns the clone. After we done the clone, we change the cloneNode() innerHTML to our quote. Then we apply the appendChild() method. The appendChild() method appends a node as the last child of a node. We first clone the "root-div" as a node then append the node the big body container with id named "quote". In addition for mouse events, we use addEventListner methods by iterating all div we want to change the color when our mouse is over or not. Also, we applied the position changed by adding CSS style inside the Javascript function when our mouse is over or not.
 
 ## Creativity:
 Yuhao Wang (wangy63)
@@ -38,10 +38,10 @@ Yanshen Lin (liny16)
 
 Sam Avis (aviss)
 
-I generally made the site more colorful. 
-I added the rainbow background as I thought the plain white would be dull. I also added the moving animation to the background. 
-I then added a white border around the text to make it easier to read with the new background. 
-I also changed the color of hovering over the divs from a static color to a random color that keeps changing.
+- I generally made the site more colorful. 
+- I added the rainbow background as I thought the plain white would be dull. I also added the moving animation to the background. 
+- I then added a white border around the text to make it easier to read with the new background. 
+- I also changed the color of hovering over the divs from a static color to a random color that keeps changing.
 
 Kristofer Kwan (kwank2)
 - changed the border radius of each individual div tag
