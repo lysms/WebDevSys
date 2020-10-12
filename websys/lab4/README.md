@@ -24,8 +24,10 @@ For Part 1b, we utilized the same recursive structure as Part1a to iterate thoug
 	
 ## Part2:
 The onclick event bubbles through the DOM because it is applied to every element as the recursive function goes through the DOM's tree structure depth-first. We also had to add another parameter to the function that kept track of if the current element was in the body. Without the use of JQuery, we had to apply the new attribute to each individual DOM object that fit the given parameter of being in the body, checking each node of the DOM tree individually.
+
 ## Part3:
-	
+We apply two important methods (appendchild() and clonenode()) which are required for this part. The cloneNode() method creates a copy of a node, and returns the clone. The appendChild() method appends a node as the last child of a node. We first clone the "root-div" as a node then append the node the big body container with id named "quote". In addition for mouse events, we use addEventListner methods by iterating all div we want to change the color when our mouse is over or not.
+
 ## Creativity:
 Yuhao Wang (wangy63)
 - What I make is that I create a speech button. This skill is inspired by a funny game video. Then I search Google for a lot of resources to learn how to create a normal speech button. I also have applied this similar method into our group project. Hope you can enjoy the AI voice, Lol.
