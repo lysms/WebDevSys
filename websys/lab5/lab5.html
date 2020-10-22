@@ -14,11 +14,20 @@
         
         <h1>Hexed game</h1>
         <h2>Player name</h2>
-        <p>Number of turns:</p>
+        <p>Turn #: <span id="num-turn"></span></p>
+        <p>Total Turns: <span id="total-turns"></span></p>
     </main>
 
-
-        <p>scoring</p>
+    <div id = "Results" style="display: hidden;">
+        <ul>
+            <li>Red: <span id="red-result"></span></li>
+            <li>Green: <span id="green-result"></span></li>
+            <li>Blue: <span id="blue-result"></span></li>
+        </ul>
+    </div>
+    <button id = "guess">Guess</button> 
+    <button id = "newGame">New Game</button>  
+    <p>scoring</p>
     
 
 </body>
