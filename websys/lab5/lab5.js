@@ -11,6 +11,7 @@ var state = {
         green: 122,
         blue: 133
     },
+    guess: {},
     turnNumber: 1,
     totalTurns: 10
 }
@@ -56,6 +57,7 @@ function resetGame(){
     state = {
         gameInSession: false,
         correct: {},
+        guess: {},
         turnNumber: 1,
         totalTurns: 10
     }
@@ -94,7 +96,7 @@ $( document ).ready(function() {
             blue: getRandomInt(0, 255),
             green: getRandomInt(0, 255)
         }
-        guesschecker(test); 
+        guesschecker(state.guess); 
         updateGame();
         if(state.turnNumber == state.totalTurns + 1){
             resetGame();
@@ -109,6 +111,12 @@ $(function() {
 
     function hexFromRGB(r, g, b){
         var hex = [r.toString(16), g.toString(16), b.toString(16)];
+        state.guess = {
+            red: r,
+            blue: b,
+            green: g
+        }
+        console.log(state.guess);        
         $.each(hex, function(color, value){
             if(value.length === 1){
                 hex[color] = "0"+ value;
@@ -116,23 +124,26 @@ $(function() {
         });
         return hex.join("").toUpperCase();
     }
-    
-    $( "#red, #blue, #green"  ).slider({
-        max: 70,
-        min: 0,
-        change: function(){
-            var red = $("red").slider("value");
-            var blue = $("blue").slider("value");
-            var green = $("green").slider("value");
-            var hex = hexFromRGB(red, green, blue);
-            $("box").css("background-color", "#" + hex);
-        }
-        
-    });
 
-    $("#red").slider("value", 255);
-    $("#blue").slider("value", 140);
-    $("#greeb").slider("value", 60);
+    function refreshSwatch() {
+        var red = $( "#red" ).slider( "value" ),
+          green = $( "#green" ).slider( "value" ),
+          blue = $( "#blue" ).slider( "value" ),
+          hex = hexFromRGB( red, green, blue );
+        $( "#swatch" ).css( "background-color", "#" + hex );
+      }
+    
+      $( "#red, #green, #blue" ).slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 127,
+        slide: refreshSwatch,
+        change: refreshSwatch
+      });
+      $( "#red" ).slider( "value", 255 );
+      $( "#green" ).slider( "value", 140 );
+      $( "#blue" ).slider( "value", 60 );
 });
 
 
