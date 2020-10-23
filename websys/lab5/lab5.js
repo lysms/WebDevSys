@@ -78,7 +78,8 @@ function updateGame(){
 }
 
 $( document ).ready(function() { 
-     
+
+
     let setting = {
         player_name:"john",
         turn: 3
@@ -103,6 +104,20 @@ $( document ).ready(function() {
     $("#newGame").click(function(){
         newGame()
     })
+});
+
+$(function() {
+
+    /*
+    $("#red").slider();
+    $("#blue").slider();
+    $("#greeb").slider();
+    */
+    $( "#red, #blue, #green"  ).slider({
+        max: 70,
+        min: 0,
+        
+    });
 });
 
 
