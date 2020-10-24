@@ -1,7 +1,7 @@
 #box {
     width: 120px;
     height: 120px;
-    border: 2px black solid;
+    border: 2px white solid;
 }
 
 /* Yuhao's creativity and css styling */
@@ -13,11 +13,11 @@
     animation:blinkingText 1.2s infinite;
 }
 @keyframes blinkingText{
-    0%{     color: white;    }
-    49%{    color: #000; }
+    0%{     color: #FFF;    }
+    49%{    color: #555; }
     60%{    color: transparent; }
     99%{    color:transparent;  }
-    100%{   color: white;    }
+    100%{   color: #000;    }
 }
 
 
@@ -76,7 +76,7 @@
   }
 }
 
-
+ /* reference: https://codepen.io/adamabundis/pen/PoYgvYQ  */;
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
 
 body {
