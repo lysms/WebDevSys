@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 5 Hexed</title>
     <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link  class="head" rel="stylesheet" href="lab5.css"/>
+    <link class="head" rel="stylesheet" href="lab5.css" />
     <script src="lab5.js"></script>
-    
 </head>
-<body>
 
+<body>        
+<div class="wrapper">
     <main id="game">
-        
-        <h1>Hexed game</h1>
+        <h1 class="blinking">Hexed Game</h1>
         <h2>Player name</h2>
         <p>Turn #: <span id="num-turn"></span></p>
         <p>Total Turns: <span id="total-turns"></span></p>
     </main>
-
-    <div id = "Results" style="display: hidden;">
+    <div id="Results" style="display: hidden;">
         <ul>
             <li>Red: <span id="red-result"></span></li>
             <li>Green: <span id="green-result"></span></li>
             <li>Blue: <span id="blue-result"></span></li>
         </ul>
     </div>
-    <button id = "guess">Guess</button> 
-    <button id = "newGame">New Game</button>  
-    <p>scoring</p>
-    
+    <button id="guess">Guess</button>
+    <button id="newGame">New Game</button>
+    <p id="score">scoring</p>
     <div id="red"></div>
     <div id="blue"></div>
     <div id="green"></div>
-    <div id="box"></div>
-
+        <div id="box"></div>
+        <div class="lds-heart"><div></div></div>
+</div>
 </body>
+
 </html>

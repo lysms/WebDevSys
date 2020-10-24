@@ -1,8 +1,8 @@
-(function ( $ ) {
+(function($) {
     $.fn.hexed = function(settings) {
         console.log("this is the hex function");
     };
-}( jQuery ));
+}(jQuery));
 
 var state = {
     gameInSession: true,
@@ -21,30 +21,30 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function guesschecker(guess){
+function guesschecker(guess) {
     let percentoff = {};
     let correctVals = 0;
 
-    for(var color in guess){
-        percentoff[color] =Math.round((Math.abs(state.correct[color] - guess[color])/255) * 100) 
+    for (var color in guess) {
+        percentoff[color] = Math.round((Math.abs(state.correct[color] - guess[color]) / 255) * 100)
     }
-    
-    for(var color in percentoff){
-        if (percentoff[color] == 0){
-            document.querySelector("#" + color + "-result").innerHTML = "You got it! (" + percentoff[color] + "% off)";    
+
+    for (var color in percentoff) {
+        if (percentoff[color] == 0) {
+            document.querySelector("#" + color + "-result").innerHTML = "You got it! (" + percentoff[color] + "% off)";
             correctVals += 1
-        }else{
+        } else {
             document.querySelector("#" + color + "-result").innerHTML = percentoff[color] + "% off";
         }
     }
-    if(correctVals == 3){
+    if (correctVals == 3) {
         alert("you got it right!")
         resetGame();
     }
     state.turnNumber += 1;
 }
 
-function getRandomColor(){
+function getRandomColor() {
     return {
         red: getRandomInt(0, 255),
         blue: getRandomInt(0, 255),
@@ -52,7 +52,7 @@ function getRandomColor(){
     }
 }
 
-function resetGame(){
+function resetGame() {
     state = {
         gameInSession: false,
         correct: {},
@@ -65,7 +65,7 @@ function resetGame(){
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
 }
 
-function newGame(){
+function newGame() {
     state.gameInSession = true
     state.correct = getRandomColor()
     $("#newGame").hide()
@@ -73,14 +73,14 @@ function newGame(){
     $("#Results").show()
 }
 
-function updateGame(){
+function updateGame() {
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
 }
 
-$( document ).ready(function() { 
+$(document).ready(function() {
 
     let setting = {
-        player_name:"john",
+        player_name: "john",
         turn: 3
     };
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
@@ -88,51 +88,49 @@ $( document ).ready(function() {
     resetGame();
 
     $("#game").hexed(setting);
-    $("#guess").click(function(){
+    $("#guess").click(function() {
         let test = {
             red: getRandomInt(0, 255),
             blue: getRandomInt(0, 255),
             green: getRandomInt(0, 255)
         }
-        guesschecker(test); 
+        guesschecker(test);
         updateGame();
-        if(state.turnNumber == state.totalTurns + 1){
+        if (state.turnNumber == state.totalTurns + 1) {
             resetGame();
         }
     })
-    $("#newGame").click(function(){
+    $("#newGame").click(function() {
         newGame()
     })
 });
 
 $(function() {
 
-    function hexFromRGB(r, g, b){
+    function hexFromRGB(r, g, b) {
         var hex = [r.toString(16), g.toString(16), b.toString(16)];
-        $.each(hex, function(color, value){
-            if(value.length === 1){
-                hex[color] = "0"+ value;
+        $.each(hex, function(color, value) {
+            if (value.length === 1) {
+                hex[color] = "0" + value;
             }
         });
         return hex.join("").toUpperCase();
     }
-    
-    $( "#red, #blue, #green"  ).slider({
+
+    $("#red, #blue, #green").slider({
         max: 70,
         min: 0,
-        change: function(){
+        change: function() {
             var red = $("red").slider("value");
             var blue = $("blue").slider("value");
             var green = $("green").slider("value");
             var hex = hexFromRGB(red, green, blue);
             $("box").css("background-color", "#" + hex);
         }
-        
+
     });
 
     $("#red").slider("value", 255);
     $("#blue").slider("value", 140);
     $("#greeb").slider("value", 60);
 });
-
-
