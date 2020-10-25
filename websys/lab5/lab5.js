@@ -1,3 +1,8 @@
+let setting = {
+	playerName:"john",
+        totalTurns: 3
+};
+
 (function ( $ ) {
     $.fn.hexed = function(settings) {
         console.log("this is the hex function");
@@ -75,17 +80,21 @@ function newGame(){
 
 function updateGame(){
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
+    document.querySelector("#player-name").innerHTML = setting.playerName;
+    document.querySelector("#total-turns").innerHTML = setting.totalTurns;
 }
 
 $( document ).ready(function() { 
-
-    let setting = {
-        player_name:"john",
-        turn: 3
-    };
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
     document.querySelector("#total-turns").innerHTML = state.totalTurns;
     resetGame();
+
+    $("#inputSubmit").click(function() {
+        setting.playerName = $("#name_box").val();
+	setting.totalTurns = parseInt($("#turn_box").val());
+	state.totalTurns = setting.totalTurns;
+	updateGame();
+    })
 
     $("#game").hexed(setting);
     $("#guess").click(function(){
