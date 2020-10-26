@@ -13,7 +13,9 @@ var state = {
     },
     guess: {},
     turnNumber: 1,
-    totalTurns: 10
+    totalTurns: 10,
+    gameTime: 0,
+    highScore: 0
 }
 
 function getRandomInt(min, max) {
@@ -27,9 +29,16 @@ function guesschecker(guess){
     let correctVals = 0;
 
     for(var color in guess){
-        percentoff[color] =Math.round((Math.abs(state.correct[color] - guess[color])/255) * 100) 
+        percentoff[color] = Math.round((Math.abs(state.correct[color] - guess[color])/255) * 100);
     }
-    
+    let score = (300 - (percentoff["red"] + percentoff["blue"] + percentoff["green"])) 
+                * ((20000 - state.gameTime) < 0 ? 0 : (20000 - state.gameTime));
+    document.querySelector("#score").innerHTML = "Score: " + score;
+    if(score > state.highScore){
+        state.highScore = score;
+        document.querySelector("#high_score").innerHTML = "High Score: " + score;
+    }
+
     for(var color in percentoff){
         if (percentoff[color] == 0){
             document.querySelector("#" + color + "-result").innerHTML = "You got it! (" + percentoff[color] + "% off)";    
@@ -53,18 +62,22 @@ function getRandomColor(){
     }
 }
 
+var timerVar;
 function resetGame(){
     state = {
         gameInSession: false,
         correct: {},
         guess: {},
         turnNumber: 1,
-        totalTurns: 10
+        totalTurns: 10,
+        gameTime: 0,
+        highScore: 0
     }
     $("#guess").hide();
     $("#Results").hide();
     $("#newGame").show();
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
+    clearInterval(timerVar);
 }
 
 function newGame(){
@@ -73,6 +86,12 @@ function newGame(){
     $("#newGame").hide()
     $("#guess").show()
     $("#Results").show()
+    state.gameTime = 0;
+    timerVar = setInterval(updateTime, 10);
+}
+
+function updateTime(){
+    document.querySelector("#time").innerHTML = "Time(seconds): " + state.gameTime++/100;
 }
 
 function updateGame(){
