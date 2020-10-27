@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #box {
     width: 120px;
     height: 120px;
@@ -11,6 +12,34 @@
 
 
 
+=======
+
+#box{
+    width: 120px;
+    height: 120px;
+    border: 2px black solid;
+}
+
+#red, #green, #blue {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 15px;
+  }
+  #swatch {
+    width: 120px;
+    height: 100px;
+    margin-top: 18px;
+    margin-left: 350px;
+    background-image: none;
+  }
+  #red .ui-slider-range { background: #ef2929; }
+  #red .ui-slider-handle { border-color: #ef2929; }
+  #green .ui-slider-range { background: #8ae234; }
+  #green .ui-slider-handle { border-color: #8ae234; }
+  #blue .ui-slider-range { background: #729fcf; }
+  #blue .ui-slider-handle { border-color: #729fcf; }
+>>>>>>> master
 
 .lds-heart {
   display: inline-block;
@@ -26,7 +55,11 @@
   position: absolute;
   width: 32px;
   height: 32px;
+<<<<<<< HEAD
   background: #fff;
+=======
+  background: red;
+>>>>>>> master
   animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .lds-heart div:after,
@@ -36,7 +69,11 @@
   display: block;
   width: 32px;
   height: 32px;
+<<<<<<< HEAD
   background: #fff;
+=======
+  background: red;
+>>>>>>> master
 }
 .lds-heart div:before {
   left: -24px;
@@ -66,4 +103,7 @@
     transform: scale(0.9);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master

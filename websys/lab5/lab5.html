@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 5 Hexed</title>
-    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link class="head" rel="stylesheet" href="lab5.css" />
     <script src="lab5.js"></script>
 </head>
+<<<<<<< HEAD
+=======
+<body class = "container">
+>>>>>>> master
 
     <main id="game">
-        
+        <div class="lds-heart"><div></div></div>
         <h1>Hexed game</h1>
         <h2 id="player-name">Player name</h2>
         <p>Turn #: <span id="num-turn"></span></p>
@@ -29,10 +35,11 @@
     <div id = "Results" style="display: hidden;">
         <ul>
             <li>Red: <span id="red-result"></span></li>
-            <li>Green: <span id="green-result"></span></li>
             <li>Blue: <span id="blue-result"></span></li>
+            <li>Green: <span id="green-result"></span></li>
         </ul>
     </div>
+<<<<<<< HEAD
     <button id="guess">Guess</button>
     <button id="newGame">New Game</button>
     <p id="score">scoring</p>
@@ -42,5 +49,25 @@
         <div id="box"></div>
 
 </div>
+=======
+    <button id = "guess" class="btn btn-info">Guess</button> 
+    <button id = "newGame" class="btn btn-info ">New Game</button>  
+    <p id="score">Score: 0</p>
+    <p id="high_score">High Score: 0</p>
+    <p id="time">Time(seconds): 0</p>
+    
+
+    <div class="ui-widget-content" style="border:0;">
+    <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+        <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+        Simple Colorpicker
+    </p>
+    <div id="red"></div>
+    <div id="blue"></div>
+    <div id="green"></div>
+    <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+
+    </div>
+>>>>>>> master
 </body>
 </html>

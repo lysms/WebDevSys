@@ -16,8 +16,11 @@ var state = {
         green: 122,
         blue: 133
     },
+    guess: {},
     turnNumber: 1,
-    totalTurns: 10
+    totalTurns: 10,
+    gameTime: 0,
+    highScore: 0
 }
 
 function getRandomInt(min, max) {
@@ -30,13 +33,20 @@ function guesschecker(guess) {
     let percentoff = {};
     let correctVals = 0;
 
-    for (var color in guess) {
-        percentoff[color] = Math.round((Math.abs(state.correct[color] - guess[color]) / 255) * 100)
+    for(var color in guess){
+        percentoff[color] = Math.round((Math.abs(state.correct[color] - guess[color])/255) * 100);
+    }
+    let score = (300 - (percentoff["red"] + percentoff["blue"] + percentoff["green"])) 
+                * ((20000 - state.gameTime) < 0 ? 0 : (20000 - state.gameTime));
+    document.querySelector("#score").innerHTML = "Score: " + score;
+    if(score > state.highScore){
+        state.highScore = score;
+        document.querySelector("#high_score").innerHTML = "High Score: " + score;
     }
 
-    for (var color in percentoff) {
-        if (percentoff[color] == 0) {
-            document.querySelector("#" + color + "-result").innerHTML = "You got it! (" + percentoff[color] + "% off)";
+    for(var color in percentoff){
+        if (percentoff[color] == 0){
+            document.querySelector("#" + color + "-result").innerHTML = "You got it! (" + percentoff[color] + "% off)";    
             correctVals += 1
         } else {
             document.querySelector("#" + color + "-result").innerHTML = percentoff[color] + "% off";
@@ -57,17 +67,22 @@ function getRandomColor() {
     }
 }
 
-function resetGame() {
+var timerVar;
+function resetGame(){
     state = {
         gameInSession: false,
         correct: {},
+        guess: {},
         turnNumber: 1,
-        totalTurns: 10
+        totalTurns: 10,
+        gameTime: 0,
+        highScore: 0
     }
     $("#guess").hide();
     $("#Results").hide();
     $("#newGame").show();
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
+    clearInterval(timerVar);
 }
 
 function newGame() {
@@ -76,6 +91,12 @@ function newGame() {
     $("#newGame").hide()
     $("#guess").show()
     $("#Results").show()
+    state.gameTime = 0;
+    timerVar = setInterval(updateTime, 10);
+}
+
+function updateTime(){
+    document.querySelector("#time").innerHTML = "Time(seconds): " + state.gameTime++/100;
 }
 
 function updateGame() {
@@ -103,7 +124,7 @@ $( document ).ready(function() {
             blue: getRandomInt(0, 255),
             green: getRandomInt(0, 255)
         }
-        guesschecker(test);
+        guesschecker(state.guess); 
         updateGame();
         if (state.turnNumber == state.totalTurns + 1) {
             resetGame();
@@ -118,28 +139,37 @@ $(function() {
 
     function hexFromRGB(r, g, b) {
         var hex = [r.toString(16), g.toString(16), b.toString(16)];
-        $.each(hex, function(color, value) {
-            if (value.length === 1) {
-                hex[color] = "0" + value;
+        state.guess = {
+            red: r,
+            blue: b,
+            green: g
+        }
+        console.log(state.guess);        
+        $.each(hex, function(color, value){
+            if(value.length === 1){
+                hex[color] = "0"+ value;
             }
         });
         return hex.join("").toUpperCase();
     }
 
-    $("#red, #blue, #green").slider({
-        max: 70,
-        min: 0,
-        change: function() {
-            var red = $("red").slider("value");
-            var blue = $("blue").slider("value");
-            var green = $("green").slider("value");
-            var hex = hexFromRGB(red, green, blue);
-            $("box").css("background-color", "#" + hex);
-        }
-
-    });
-
-    $("#red").slider("value", 255);
-    $("#blue").slider("value", 140);
-    $("#greeb").slider("value", 60);
+    function refreshSwatch() {
+        var red = $( "#red" ).slider( "value" ),
+          green = $( "#green" ).slider( "value" ),
+          blue = $( "#blue" ).slider( "value" ),
+          hex = hexFromRGB( red, green, blue );
+        $( "#swatch" ).css( "background-color", "#" + hex );
+      }
+    
+      $( "#red, #green, #blue" ).slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 127,
+        slide: refreshSwatch,
+        change: refreshSwatch
+      });
+      $( "#red" ).slider( "value", 255 );
+      $( "#green" ).slider( "value", 140 );
+      $( "#blue" ).slider( "value", 60 );
 });
