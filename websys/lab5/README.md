@@ -9,4 +9,4 @@
 
 # Creativity (Yuhao)
 
-- For this lab we apply many animations. The first one is a beating heart. The second one is a flashing title for the game called "hexed game". The last one is a little big complicated one. It is a moving background image created by animation of position change.
+- For this lab we apply many animations. We combine animations into a single image which is a red heart. This makes the page more attractive to those people who enjoy our hexed game. There was a problem that the heart can not be perfect (always miss some parts) so I utilize two "divs" with before and after properties then successfully resolved that problem.
