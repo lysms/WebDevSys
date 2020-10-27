@@ -11,15 +11,22 @@
     <script src="lab5.js"></script>
 </head>
 
-<body>        
-<div class="wrapper">
-    <main id="game">        
-        <h1>Hexed Game</h1>
-        <h2>Player name</h2>
+    <main id="game">
+        
+        <h1>Hexed game</h1>
+        <h2 id="player-name">Player name</h2>
         <p>Turn #: <span id="num-turn"></span></p>
         <p>Total Turns: <span id="total-turns"></span></p>
     </main>
-    <div id="Results" style="display: hidden;">
+
+
+	Enter name: <input type="text" name="name" id="name_box"> <br/>
+	Enter # of turns: <input type="text" name="turns" id="turn_box"> <br/>
+	<button id="inputSubmit"> Submit </button>
+
+    <br/>
+
+    <div id = "Results" style="display: hidden;">
         <ul>
             <li>Red: <span id="red-result"></span></li>
             <li>Green: <span id="green-result"></span></li>
@@ -36,5 +43,4 @@
 
 </div>
 </body>
-
 </html>
