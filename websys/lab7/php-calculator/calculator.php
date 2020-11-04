@@ -233,7 +233,7 @@ class XToY extends twoValueOperation{
   <?php 
     if (isset($op)) {
       try {
-        echo $op->getEquation();
+        echo "<h3>". $op->getEquation(). "</h3><br>";
       }
       catch (Exception $e) { 
         $err[] = $e->getMessage();
@@ -247,9 +247,9 @@ class XToY extends twoValueOperation{
 
   </pre>
   <form method="post" action="calculator.php">
-    <div>
-      <input type="text" name="op1" id="left-field" value="" />
-      <input id="right-field" type="text" name="op2" value="" />
+    <div id="input-field">
+      <input type="text" name="op1" id="name" value="" />
+      <input id="right-field" type="text" name="op2" id="name" value="" />
     </div>
     <br/>
     <div class="buttonGroup">
