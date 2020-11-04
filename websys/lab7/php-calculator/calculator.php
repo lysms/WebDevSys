@@ -165,6 +165,46 @@ class XToY extends twoValueOperation{
   
 }
 
+// Some more interesting useful math functions
+// Arc triangle functions
+class Abs extends oneValueOperation {
+  public function operate() {
+    return abs($this->operand_1);
+  }
+  public function getEquation() {
+    return "abs(" . $this->operand_1 . ') = ' . $this->operate();
+  }
+}
+
+
+class ASin extends oneValueOperation {
+  public function operate() {
+    return asin($this->operand_1);
+  }
+  public function getEquation() {
+    return "asin(" . $this->operand_1 . ') = ' . $this->operate();
+  }
+}
+
+class ACos extends oneValueOperation {
+  public function operate() {
+    return acos($this->operand_1);
+  }
+  public function getEquation() {
+    return "acos(" . $this->operand_1 . ') = ' . $this->operate();
+  }
+}
+
+class ATan extends oneValueOperation {
+  public function operate() {
+    return atan($this->operand_1);
+  }
+  public function getEquation() {
+    return "atan(" . $this->operand_1 . ') = ' . $this->operate();
+  }
+}
+
+
 // Check to make sure that POST was received 
 // upon initial load, the page will be sent back via the initial GET at which time
 // the $_POST array will not have values - trying to access it will give undefined message
@@ -206,6 +246,14 @@ class XToY extends twoValueOperation{
       $op = new Cos($o1);
     } else if(isset($_POST['tan']) && $_POST['tan'] == 'Tan') {
       $op = new Tan($o1);
+    } else if(isset($_POST['asin']) && $_POST['asin'] == 'ASin') {
+      $op = new ASin($o1);
+    } else if(isset($_POST['acos']) && $_POST['acos'] == 'ACos') {
+      $op = new ACos($o1);
+    } else if(isset($_POST['atan']) && $_POST['atan'] == 'ATan') {
+      $op = new ATan($o1);
+    } else if(isset($_POST['abs']) && $_POST['abs'] == 'Abs') {
+      $op = new Abs($o1);
     } 
   }
   catch (Exception $e) {
@@ -269,6 +317,12 @@ class XToY extends twoValueOperation{
       <input class="btn btn-secondary operation" type="submit" name="cos" value="Cos" />  
       <input class="btn btn-secondary operation" type="submit" name="tan" value="Tan" />
       <input class="btn btn-secondary operation" type="submit" name="xty" value="X ^ Y" />
+    </div>
+    <div class="buttonGroup">
+      <input class="btn btn-secondary operation" type="submit" name="asin" value="ASin" />  
+      <input class="btn btn-secondary operation" type="submit" name="acos" value="ACos" />  
+      <input class="btn btn-secondary operation" type="submit" name="atan" value="ATan" />
+      <input class="btn btn-secondary operation" type="submit" name="abs" value="Abs" />
     </div>
     <div class="buttonGroup">
       <input class="btn btn-secondary operation" type="submit" name="sqrt" value="Sqrt" />
