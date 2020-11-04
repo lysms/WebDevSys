@@ -8,8 +8,17 @@ form{
 	width: 100%;
 }
 
-#left-field{
+#input-field{
     width: 50%;
+    margin: auto;
+}
+
+#left-field{
+    width: 25%;
+}
+
+#right-field{
+    width: 25%;
 }
 
 #result {
