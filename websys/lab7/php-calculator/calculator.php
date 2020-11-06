@@ -281,7 +281,7 @@ class ATan extends oneValueOperation {
   <?php 
     if (isset($op)) {
       try {
-        echo "<h3>". $op->getEquation(). "</h3><br>";
+        echo "<h3>". $op->getEquation(). "</h3>";
       }
       catch (Exception $e) { 
         $err[] = $e->getMessage();
@@ -296,8 +296,9 @@ class ATan extends oneValueOperation {
   </pre>
   <form method="post" action="calculator.php">
     <div id="input-field">
-      <input type="text" name="op1" id="left-field" id="name" value="" />
-      <input id="right-field" type="text" name="op2" id="name" value="" />
+      <input type="text" name="op1" id="left-field" id="name" value="" placeholder="Please input a valid number" />
+      <input id="right-field" type="text" name="op2" id="name" value="" placeholder="Please input a valid number" />
+
     </div>
     <br/>
     <div class="buttonGroup">

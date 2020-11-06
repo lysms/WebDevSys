@@ -4,6 +4,7 @@ $(document).ready(function() {
         const resultIndex = result.search("=");
         const resultValue = result.slice(resultIndex+2);
         document.querySelector("#name").value = parseFloat(resultValue);
-    }) 
-})
+    });
+    
+});
 
