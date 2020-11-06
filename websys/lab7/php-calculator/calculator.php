@@ -296,8 +296,8 @@ class ATan extends oneValueOperation {
   </pre>
   <form method="post" action="calculator.php">
     <div id="input-field">
-      <input type="text" name="op1" id="left-field" id="name" value="" placeholder="Please input a valid number" />
-      <input id="right-field" type="text" name="op2" id="name" value="" placeholder="Please input a valid number" />
+      <input type="text" name="op1" id="left-field" id="name" value="" placeholder="Please input a valid number1" />
+      <input id="right-field" type="text" name="op2" id="name" value="" placeholder="Please input a valid number2" />
 
     </div>
     <br/>

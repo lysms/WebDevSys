@@ -9,16 +9,17 @@ form{
 }
 
 #input-field{
-    width: 50%;
+    width: 100%;
     margin: auto;
+    text-align: center;
 }
 
 #left-field{
-    width: 25%;
+    width: 40%;
 }
 
 #right-field{
-    width: 25%;
+    width: 40%;
 }
 
 #result {
