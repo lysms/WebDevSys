@@ -5,4 +5,5 @@ $(document).ready(function() {
         const resultValue = result.slice(resultIndex+2);
         document.querySelector("#name").value = parseFloat(resultValue);
     }) 
-})    
+})
+
