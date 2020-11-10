@@ -22,3 +22,4 @@ I worked on the logarithm and natural logarithm classes and functions. In additi
 I worked on the `Square root`, `x^2` and `x^y` function in this lab. Also, I did parts of the styling for the whole page to make the calculator look much better. For the function that I created, I am using the `pow` and `sqrt` to get the result based on the user's input. 
 
 ## Yuhao Wang 
+I mainly focused on the math functions definitions and then find some small errors which will lead to wrong outcomes but then I realized there are some specific built-in PHP math functions we can directly use. For creativity part, I add 4 more functions including absolute value, arc triangle functions asin, acos and atan. I also modify the output and add placeholder attribute for the input box.
