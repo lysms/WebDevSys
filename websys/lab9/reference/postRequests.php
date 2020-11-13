@@ -55,7 +55,7 @@ if ($dbOk) {
 	//$db->query($query);
 
 	// case 1 & case 2
-	if (isset($_POST['tsreet'])) {
+	if (isset($_POST['street'])) {
 		$query = "ALTER TABLE students ADD Street VARCHAR( 255 ) after phone";
 		$db->query($query);
 	}
