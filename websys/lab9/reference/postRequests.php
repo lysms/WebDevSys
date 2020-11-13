@@ -139,5 +139,6 @@ if ($dbOk) {
             <br>
             <textarea id="aSpec" name="aSpec" rows="1" cols="30"></textarea>
         </div>
+        <div><input type="submit" value="createTable" /></div>
     </form>
 </body>
