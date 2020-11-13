@@ -15,7 +15,7 @@ cardAdd.send(cardInfo);
 
 
 
- <?php
+<?php
 
 $dbOk = false;
 @ $db = new mysqli('localhost', 'root', '', 'websyslab9');
@@ -44,7 +44,7 @@ if($dbOk){
 			echo "case 10";	
             break;
         default:
-            echo "error"
+            echo "error";
             break;
 		}
 	// creates and executes the update query
@@ -54,4 +54,3 @@ if($dbOk){
 	//$db->query($query);
 }
 ?>
-
