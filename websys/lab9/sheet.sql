@@ -1,17 +1,17 @@
 
--- 1. Add address fields (street, city, state, zip) to the students table
-ALTER TABLE `students` ADD `street` VARCHAR(255) NOT NULL AFTER `phone`, ADD `city` VARCHAR(255) NOT NULL AFTER `street`, ADD `state` VARCHAR(255) NOT NULL AFTER `city`, ADD `zip` INT(5) NOT NULL AFTER `state`;
+-- -- 1. Add address fields (street, city, state, zip) to the students table
+-- ALTER TABLE `students` ADD `street` VARCHAR(255) NOT NULL AFTER `phone`, ADD `city` VARCHAR(255) NOT NULL AFTER `street`, ADD `state` VARCHAR(255) NOT NULL AFTER `city`, ADD `zip` INT(5) NOT NULL AFTER `state`;
 
--- 2. Add section and year fields to the courses table
-ALTER TABLE `courses` ADD `section` VARCHAR(255) NOT NULL AFTER `title`, ADD `year` INT(10) NOT NULL AFTER `section`;
+-- -- 2. Add section and year fields to the courses table
+-- ALTER TABLE `courses` ADD `section` VARCHAR(255) NOT NULL AFTER `title`, ADD `year` INT(10) NOT NULL AFTER `section`;
 
 -- 3. CREATE a grades table containing id (int primary key, auto increment), crn (foreign key), RIN (foreign key), and grade (int 3 not null)
-CREATE TABLE `grades` (
-  `id` int(11) NOT NULL,
-  `crn` int(11) NOT NULL,
-  `RIN` int(9) NOT NULL,
-  `grade` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-- CREATE TABLE `grades` (
+--   `id` int(11) NOT NULL,
+--   `crn` int(11) NOT NULL,
+--   `RIN` int(9) NOT NULL,
+--   `grade` int(3) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 4. INSERT at least 4 courses into the courses table
 INSERT INTO `courses` (`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES
