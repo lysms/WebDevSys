@@ -53,5 +53,50 @@ if ($dbOk) {
 
 	//executes the query
 	//$db->query($query);
+
+	if (isset($_POST['tsreet'])) {
+		$query = "ALTER TABLE students ADD Street VARCHAR( 255 ) after phone";
+		$db->query($query);
+	}
+	if (isset($_POST['city'])) {
+		$query = "ALTER TABLE students ADD City VARCHAR( 255 ) after street";
+		$db->query($query);
+	}
+	if (isset($_POST['state'])) {
+		$query = "ALTER TABLE students ADD State VARCHAR( 255 ) after city";
+		$db->query($query);
+	}
+	if (isset($_POST['zip'])) {
+		$query = "ALTER TABLE students ADD Zip INT( 5 ) after state";
+		$db->query($query);
+	}
+
+	if (isset($_POST['section'])) {
+		$query = "ALTER TABLE courses ADD section INT( 2 ) after title";
+		$db->query($query);
+	}
+
+	if (isset($_POST['year'])) {
+		$query = "ALTER TABLE courses ADD year INT( 10 ) after section";
+		$db->query($query);
+	}
 }
 ?>
+
+<h3>Update & Display the Database</h3>
+<form id="addform" name="addform" action="postRequests.php"></form>
+<fieldset>
+    <div class="formData">
+        <label class="field" for="addField">Add address fields to the students table</label>
+        <input type="submit" name="street" value="Street">
+        <input type="submit" name="city" value="City">
+        <input type="submit" name=state" value="State">
+        <input type="submit" name="zip" value="Zip Code">
+    </div>
+    <br>
+    <div class="formData">
+        <label class="field" for="addField">Add section and year to the course table</label>
+        <input type="submit" name="section" value="section">
+        <input type="submit" name="year" value="year">
+    </div>
+</fieldset>
