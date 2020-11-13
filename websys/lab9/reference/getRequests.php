@@ -1,21 +1,4 @@
-<!-- 
-// How to use:
-
-var cardFront = "This is the front of the card";
-var cardBack = "This is the back of the card";
-
-let cardInfo = new FormData();
-cardInfo.append("request", "{\"front\":\""+cardFront+"\",\"back\":\""+cardBack+"\"}");
-
-let cardAdd = new XMLHttpRequest();
-cardAdd.open("post", "addCard.php", true);
-cardAdd.send(cardInfo);
- -->
-
-
-
-
- <?php
+<?php
 
 $dbOk = false;
 @ $db = new mysqli('localhost', 'root', '', 'websyslab9');
@@ -27,9 +10,7 @@ else{
 }
 
 if($dbOk){
-	$request = json_decode("$_GET[request]", true);
-
-	$requestType = $request['requestID'];
+	$requestType = $_GET['requestId'];
 	switch($requestType) {
         case 7:	
 			echo "case 7"; 
@@ -38,15 +19,43 @@ if($dbOk){
 			echo "case 8";
 			break;
 		case 9:	
-			echo "case 9";
+			$sql = "SELECT 
+						c.crn,
+						AVG(g.grade) as avg_grade 
+					FROM 
+						`grades` g 
+						INNER JOIN `courses` c
+						ON g.crn = c.crn
+					GROUP BY
+						c.crn; ";
 			break;
 		case 10:
-			echo "case 10";	
+			$sql = "SELECT
+						g.crn,
+						COUNT(*) as num_students 
+					FROM 
+						`grades` g
+						INNER JOIN `students` s
+						ON g.RIN = s.RIN 
+					GROUP BY
+						g.crn;";
             break;
         default:
-            echo "error"
+            echo "error";
             break;
 		}
+		$result = $db->query($sql);
+			if($result->num_rows > 0){
+				$resultArray = array();
+				while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+					$resultArray[] = $row;
+				}
+				$resultJSON = json_encode($resultArray);
+				echo $resultJSON;
+
+			} else {
+				echo "{}";
+			}
 	// creates and executes the update query
 	//$query = 'insert into flashcards (`duedate`, `interval`, `easefactor`, `front`, `back`) values ("'. $today->format('Y-m-d H:i:s') . '", 0, 250, "' . $card['front'] . '", "'. $card['back'] .'")';
 	
