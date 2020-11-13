@@ -29,9 +29,32 @@ if ($dbOk) {
 	switch ($requestType) {
 		case 1:
 			echo "case 1";
+			if (isset($_POST['street'])) {
+				$query = "ALTER TABLE students ADD Street VARCHAR( 255 ) after phone";
+				$db->query($query);
+			}
+			if (isset($_POST['city'])) {
+				$query = "ALTER TABLE students ADD City VARCHAR( 255 ) after street";
+				$db->query($query);
+			}
+			if (isset($_POST['state'])) {
+				$query = "ALTER TABLE students ADD State VARCHAR( 255 ) after city";
+				$db->query($query);
+			}
+			if (isset($_POST['zip'])) {
+				$query = "ALTER TABLE students ADD Zip INT( 5 ) after state";
+				$db->query($query);
+			}
 			break;
 		case 2:
-			echo "case 2";
+			if (isset($_POST['section'])) {
+				$query = "ALTER TABLE courses ADD section INT( 2 ) after title";
+				$db->query($query);
+			}
+			if (isset($_POST['year'])) {
+				$query = "ALTER TABLE courses ADD year INT( 10 ) after section";
+				$db->query($query);
+			}
 			break;
 		case 3:
 			echo "case 3";
@@ -54,35 +77,7 @@ if ($dbOk) {
 	//executes the query
 	//$db->query($query);
 
-	// case 1 & case 2
-	if (isset($_POST['street'])) {
-		$query = "ALTER TABLE students ADD Street VARCHAR( 255 ) after phone";
-		$db->query($query);
-	}
-	if (isset($_POST['city'])) {
-		$query = "ALTER TABLE students ADD City VARCHAR( 255 ) after street";
-		$db->query($query);
-	}
-	if (isset($_POST['state'])) {
-		$query = "ALTER TABLE students ADD State VARCHAR( 255 ) after city";
-		$db->query($query);
-	}
-	if (isset($_POST['zip'])) {
-		$query = "ALTER TABLE students ADD Zip INT( 5 ) after state";
-		$db->query($query);
-	}
-
-	if (isset($_POST['section'])) {
-		$query = "ALTER TABLE courses ADD section INT( 2 ) after title";
-		$db->query($query);
-	}
-
-	if (isset($_POST['year'])) {
-		$query = "ALTER TABLE courses ADD year INT( 10 ) after section";
-		$db->query($query);
-	}
-
-
+	// case 1
 
 	//case 3 & case 4 (Yuhao)
 	if (isset($_GET['createTable']))    {  
