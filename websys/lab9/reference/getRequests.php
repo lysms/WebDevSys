@@ -63,4 +63,3 @@ if($dbOk){
 	//$db->query($query);
 }
 ?>
-
