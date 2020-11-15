@@ -260,7 +260,7 @@
     <form method="post">
         <div><input type="submit" name="createTable" value="createTable" /></div>
     </form>
-    <form>
+    <form method="post">
         <label for="crn">crn:</label>
         <input type="text" class="crn" name="crn"><br>
         <label for="">prefix:</label>
