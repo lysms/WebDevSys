@@ -102,26 +102,45 @@
 					}
                 }
 				break;
-			case 3:
-                echo "case 3";
-                if (isset($_GET['createTable']))    {  
-                    $aTable = $_POST['aTable'];
-                    $aFiled = $_POST['aFiled'];
-                    $aSpec = $_POST['aSpec'];  
-                   $sql=" CREATE TABLE `websyslab9`.$aTable $aFiled $aSpec "; 
-                   exit();       
-                } 
-				break;
-			case 4:
+             case 3:
+             echo "case 3";
+             if (isset($_POST['createTable']))    {  
+                $query = "CREATE TABLE grades (
+                id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                crn INT(5),
+                RIN INT(7),
+                FOREIGN KEY (crn, RIN) REFERENCES grades(id),
+                grade INT(3) NOT NULL
+                )";
+                $result = $db->query($query);
+                if ($result == 1) {
+                 $oneResult += "success, create a grades table\n";
+             }
+             else{
+                $oneResult += "fail, can not create the table\n"
+            }       
+        } 
+        break;
+            case 4:
                 echo "case 4";
-                if (isset($_GET['createTable']))    {  
-                    $aTable = $_POST['aTable'];
-                    $aFiled = $_POST['aFiled'];
-                    $aSpec = $_POST['aSpec'];  
-                   $sql=" CREATE TABLE `websyslab9`.$aTable $aFiled $aSpec "; 
-                   exit();       
-                } 
-				break;
+                // checks if the input was valid
+                if(empty($_POST["crn"]) || !ctype_digit($_POST["crn"])){
+                    $errorText = "A valid crn is required";
+                }
+                else if(empty($_POST["prefix"])){
+                    $errorText = "A valid prefix is required";
+                }
+                else if(empty($_POST["number"])|| !ctype_digit($_POST["number"])){
+                    $errorText = "A valid number is required";
+                }
+                else if(empty($_POST["title"])){
+                    $errorText = "A valid title is required";
+                }
+                if($errorText == ""){
+                    //creates and executes the query
+                    $query = 'insert into `courses` (`crn`, `prefix`, `number`, `title`) values ('.$_POST["crn"].', "'.$_POST["prefix"].'", "'.$_POST["number"].'", "'.$_POST["title"].')';
+                    $result = $db->query($query);
+                break;
 			case 5:
 				// checks if the input was valid
 				if(empty($_POST["rin"]) || !ctype_digit($_POST["rin"])){
@@ -239,25 +258,20 @@
     <!-- Yuhao case 3 & 4 -->
 
     <form method="post">
-        <div>
-            <label for="aTable">Table Name:</label>
-            <br>
-            <textarea id="aTable" name="aTable" rows="1" cols="20"></textarea>
-        </div>
-        <br>
-        <div>
-            <label for="aFiled">Filed Name:</label>
-            <br>
-            <textarea id="aFiled" name="aFiled" rows="1" cols="20"></textarea>
-        </div>
-        <br>
-        <div>
-            <label for="aSpec">Specs of the new filed here:</label>
-            <br>
-            <textarea id="aSpec" name="aSpec" rows="1" cols="30"></textarea>
-        </div>
-        <div><input type="submit" value="createTable" /></div>
+        <div><input type="submit" name="createTable" value="createTable" /></div>
     </form>
+    <form>
+        <label for="crn">crn:</label>
+        <input type="text" class="crn" name="crn"><br>
+        <label for="">prefix:</label>
+        <input type="text" class="prefix" name="prefix"><br>
+        <label for="">number:</label>
+        <input type="text" class="number" name="number"><br>
+        <label for="">title:</label>
+        <input type="text" class="title" name="title"><br>
+        <input type="submit">
+    </form>
+
 
     <!-- Case 5 & 6 -->
     <form method="post">
