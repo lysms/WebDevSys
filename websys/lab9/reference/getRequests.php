@@ -12,11 +12,20 @@ else{
 if($dbOk){
 	$requestType = $_GET['requestId'];
 	switch($requestType) {
-        case 7:	
-			echo "case 7"; 
+		case 7:	
+			$sql = "SELECT * FROM `students` ORDER BY `RIN`, `last name`, `RCSID`, `first name`;";
 			break;
 		case 8:	
-			echo "case 8";
+			$sql = "SELECT 
+			s.RIN, 
+			CONCAT(s.`first name`,' ', s.`last name`) as name, 
+			CONCAT(s.street, ', ', s.city, ', ', s.state, ', ', s.zip) as address
+		FROM 
+			`grades` g
+			INNER JOIN `students` s
+			ON g.RIN = s.RIN 
+		WHERE 
+			grade > 90;";
 			break;
 		case 9:	
 			$sql = "SELECT 

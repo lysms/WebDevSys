@@ -31,7 +31,7 @@ function getListStudents(){
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		data: {
-			requestId: 10
+			requestId: 8
 		},
 		success: function(res){
 		  console.log(res);
