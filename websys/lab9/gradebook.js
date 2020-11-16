@@ -23,59 +23,42 @@ function createTable(data, id){
     document.getElementById(id).innerHTML = table;
 }
 
-function getAvgStudents(){
-    const url = window.location.href.toString().replace("gradebook.php", "reference/getRequests.php")
-    const response = $.ajax({
-        type: 'GET',
-        url: url,
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        data: {
-            requestId: 9
-        },
-        success: function(res){
-          console.log(res);
-          createTable(res, "results");
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) { // if there was a problem
-          console.log(XMLHttpRequest, textStatus, errorThrown);
-          alert('Error Occured');
-        }
-      });
-    return response;
+function makeGetRequest(requestId, tableId){
+  const url = window.location.href.toString().replace("gradebook.php", "getRequests.php")
+  const response = $.ajax({
+      type: 'GET',
+      url: url,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      data: {
+          requestId: requestId
+      },
+      success: function(res){
+        console.log(res);
+        createTable(res, tableId);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) { // if there was a problem
+        console.log(XMLHttpRequest, textStatus, errorThrown);
+        alert('Error Occured');
+      }
+    });
+  return response;
 }
-
-function getListStudents(){
-    const url = window.location.href.toString().replace("gradebook.php", "reference/getRequests.php")
-    const response = $.ajax({
-        type: 'GET',
-        url: url,
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        data: {
-            requestId: 10
-        },
-        success: function(res){
-          console.log(res);
-          createTable(res, "results");
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrown) { // if there was a problem
-          console.log(XMLHttpRequest, textStatus, errorThrown);
-          alert('Error Occured');
-        }
-      });
-    return response;
-}
-
-
-
 
 $(document).ready(function() {
-    $(".getAvgStudents").click(function(){
-        
-        getAvgStudents();
+    $(".lexicographicalOrder").click(function(){
+      makeGetRequest(7, "results");
     })
+
+    $(".getListStudentsOver90").click(function(){
+      makeGetRequest(8, "results");  
+    })
+    
+    $(".getAvgStudents").click(function(){
+      makeGetRequest(9, "results");
+    })
+
     $(".getListStudents").click(function(){
-        getListStudents();
+      makeGetRequest(10, "results");
     })
 })
