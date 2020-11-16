@@ -1,0 +1,116 @@
+1)
+Command:
+ALTER TABLE `students` ADD `street` VARCHAR(255) NOT NULL AFTER `phone`, ADD `city` VARCHAR(255) NOT NULL AFTER `street`, ADD `state` VARCHAR(255) NOT NULL AFTER `city`, ADD `zip` INT(5) NOT NULL AFTER `state`;
+
+Return:
+MySQL returned an empty result set (i.e. zero rows).
+
+2)
+Command:
+ALTER TABLE `courses` ADD `section` VARCHAR(255) NOT NULL AFTER `title`, ADD `year` INT(10) NOT NULL AFTER `section`;
+
+Return:
+MySQL returned an empty result set (i.e. zero rows).
+
+3)
+Command:
+CREATE TABLE `grades` (
+  `id` int(11) NOT NULL,
+  `crn` int(11) NOT NULL,
+  `RIN` int(9) NOT NULL,
+  `grade` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+Return:
+MySQL returned an empty result set (i.e. zero rows).
+
+4)
+Command:
+INSERT INTO `courses` (`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES
+(40375, 'CSCI', 1100, 'Computer Science 1', 4, 'S21'),
+(40380, 'CSCI', 1200, 'Data Structures', 4, 'S21'),
+(43694, 'ITWS', 1100, 'Intro To IT & Web Science', 1, 'S21'),
+(44051, 'ITWS', 4310, 'Managing IT Resources', 1, 'S21');
+
+Return:
+4 rows inserted.
+
+5)
+Command:
+INSERT INTO `students` (`RIN`, `RCSID`, `first name`, `last name`, `alias`, `phone`, `street`, `city`, `state`, `zip`) VALUES
+(661924000, 'smithj1', 'John', 'Smith', 'Jonny', 2016967777, '2122 Burdett Ave', 'Troy', 'New York', 12180),
+(661949001, 'axep23', 'Peter', 'Axe', 'Peter', 2124443679, '1761 15th St', 'Troy', 'New York', 12180),
+(661931234, 'goldbj', 'Jane', 'Goldberg', 'Jane', 8417852089, '112 Tenafly Rd', 'Tenafly', 'New Jersey', 07670),
+(661932903, 'pommew', 'William', 'Pommel', 'Billy', 2816781293, '20 W 34th St', 'New York', 'New York', 10001);
+
+Return:
+4 rows inserted.
+
+6)
+Command:
+INSERT INTO `grades` (`id`, `crn`, `RIN`, `grade`) VALUES
+(1, 40375, 661924000, 80),
+(2, 40375, 661949001, 90),
+(3, 40375, 661931234, 95),
+(4, 40380, 661924000, 87),
+(5, 40380, 661949001, 92),
+(6, 40380, 661931234, 71),
+(7, 43694, 661931234, 67),
+(8, 43694, 661949001, 80),
+(9, 43694, 661924000, 92),
+(10, 44051, 661931234, 91);
+
+Return:
+10 rows inserted.
+
+7)
+Command:
+SELECT * FROM `students` ORDER BY `RIN`, `last name`, `RCSID`, `first name`;
+
+Return:
+Showing rows 0 - 3 (4 total, Query took 0.0004 seconds.) [RIN: 661924000... - 661949001...] [last name: SMITH... - AXE...] [RCSID: SMITHJ1... - AXEP23...] [first name: JOHN... - PETER...]
+8)
+Command:
+SELECT 
+    s.RIN, 
+    CONCAT(s.`first name`,' ', s.`last name`) as name, 
+    CONCAT(s.street, ', ', s.city, ', ', s.state, ', ', s.zip) as address
+FROM 
+    `grades` g
+    INNER JOIN `students` s
+    ON g.RIN = s.RIN 
+WHERE 
+    grade > 90;
+
+Return:
+Showing rows 0 - 3 (4 total, Query took 0.0005 seconds.)
+
+9)
+Command:
+SELECT
+    c.crn,
+    AVG(g.grade) as avg_grade 
+FROM 
+    `grades` g 
+    INNER JOIN `courses` c
+    ON g.crn = c.crn
+GROUP BY
+    c.crn; 
+
+Return:
+Showing rows 0 - 3 (4 total, Query took 0.0004 seconds.)
+
+10)
+Command:
+SELECT
+    g.crn,
+    COUNT(*) as num_students 
+FROM 
+    `grades` g
+    INNER JOIN `students` s
+    ON g.RIN = s.RIN 
+GROUP BY
+    g.crn; 
+
+Return:
+Showing rows 0 - 3 (4 total, Query took 0.0004 seconds.)
