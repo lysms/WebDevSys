@@ -15,7 +15,7 @@ I wrote the SQL code for inserting the students in part 2. In addtion, I made th
 I worked on case 1 & 2 for part 2 and part 3. Working on all functionalities and SQL commands for add fields to the table. In addition, correct some formating error, and work on some additional features as a group. 
 
 # Yuhao
-
+I worked on case 3 & 4 for part 2 and 3. At first I was thinking using the _GET to take over the data but then with the reminder from the team I realize it is better to use _POST directly to update data from the form of the front end.
 
 
 
