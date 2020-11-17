@@ -207,10 +207,7 @@
 				break;
 			case 6:
 				// checks if the input was valid
-				if(empty($_POST["id"]) || !ctype_digit($_POST["id"])){
-					$errorText = "A valid ID is required";
-				}
-				else if(empty($_POST["crn"]) || !ctype_digit($_POST["crn"])){
+				if(empty($_POST["crn"]) || !ctype_digit($_POST["crn"])){
 					$errorText = "A valid CRN is required";
 				}
 				else if(empty($_POST["rin"]) || !ctype_digit($_POST["rin"])){
@@ -222,12 +219,12 @@
 				// checks if the query can be executed
 				if($errorText == ""){
 					//creates and executes the query
-					$query = 'insert into `grades` (`id`, `crn`, `RIN`, `grade`) values ('.$_POST["id"].', '.$_POST["crn"].', '.$_POST["rin"].', '.$_POST["grade"].')';
+					$query = 'insert into `grades` (`crn`, `RIN`, `grade`) values ('.$_POST["crn"].', '.$_POST["rin"].', '.$_POST["grade"].')';
 					$result = $db->query($query);
 
 					// informs the user of the result
 					if($result == 1){
-						$sixResult = 'Success, ('.$_POST["id"].', '.$_POST["crn"].', '.$_POST["rin"].', '.$_POST["grade"].') was added to grades';
+						$sixResult = 'Success, ('.$_POST["crn"].', '.$_POST["rin"].', '.$_POST["grade"].') was added to grades';
 					}
 					else{
 						$sixResult = "Invalid data";
@@ -344,8 +341,6 @@
                         <div class="form-group">
                             <h3>Submit Grade For Student</h3>
                             <input type="hidden" class="form-control requestType" name="requestType" value=6>
-                            <label for="id">ID</label>
-                            <input type="text" class="id form-control" name="id"><br>
                             <label for="crn">CRN</label>
                             <input type="text" class="crn form-control" name="crn"><br>
                             <label for="rin">RIN</label>

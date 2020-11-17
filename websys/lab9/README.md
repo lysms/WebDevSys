@@ -1,7 +1,5 @@
 # Lab 9
 
-
-
 # Sam
 I created the forms for case 5 and 6 as well as their php requests. I made the format for the post request with the error messaging and the result divs. I helped to debug and spell check as well. I also filled in the part2.txt file.
 

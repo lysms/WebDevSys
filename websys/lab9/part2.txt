@@ -14,12 +14,15 @@ MySQL returned an empty result set (i.e. zero rows).
 
 3)
 Command:
-CREATE TABLE `grades` (
-  `id` int(11) NOT NULL,
-  `crn` int(11) NOT NULL,
-  `RIN` int(9) NOT NULL,
-  `grade` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE grades (
+    id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    crn INT(11),
+    RIN INT(9),
+    FOREIGN KEY(crn) REFERENCES courses(crn) ON UPDATE CASCADE DELETE CASCADE,
+    FOREIGN KEY(RIN) REFERENCES students(RIN) ON UPDATE CASCADE DELETE CASCADE,
+    grade INT(3) NOT NULL
+) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 Return:
 MySQL returned an empty result set (i.e. zero rows).
