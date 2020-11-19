@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link  class="head" rel="stylesheet" href="lab5.css"/>
+    <link class="head" rel="stylesheet" href="lab5.css" />
     <script src="lab5.js"></script>
-    
 </head>
+<<<<<<< HEAD
+=======
 <body class = "container">
+>>>>>>> master
 
     <main id="game">
         <div class="lds-heart"><div></div></div>
         <h1>Hexed game</h1>
-        <h2>Player name</h2>
+        <h2 id="player-name">Player name</h2>
         <p>Turn #: <span id="num-turn"></span></p>
         <p>Total Turns: <span id="total-turns"></span></p>
     </main>
+
+
+	Enter name: <input type="text" name="name" id="name_box"> <br/>
+	Enter # of turns: <input type="text" name="turns" id="turn_box"> <br/>
+	<button id="inputSubmit"> Submit </button>
+
+    <br/>
 
     <div id = "Results" style="display: hidden;">
         <ul>
@@ -29,6 +39,17 @@
             <li>Green: <span id="green-result"></span></li>
         </ul>
     </div>
+<<<<<<< HEAD
+    <button id="guess">Guess</button>
+    <button id="newGame">New Game</button>
+    <p id="score">scoring</p>
+    <div id="red"></div>
+    <div id="blue"></div>
+    <div id="green"></div>
+        <div id="box"></div>
+
+</div>
+=======
     <button id = "guess" class="btn btn-info">Guess</button> 
     <button id = "newGame" class="btn btn-info ">New Game</button>  
     <p id="score">Score: 0</p>
@@ -47,5 +68,6 @@
     <div id="swatch" class="ui-widget-content ui-corner-all"></div>
 
     </div>
+>>>>>>> master
 </body>
 </html>

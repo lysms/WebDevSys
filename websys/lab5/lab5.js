@@ -1,8 +1,13 @@
+let setting = {
+	playerName:"john",
+        totalTurns: 3
+};
+
 (function ( $ ) {
     $.fn.hexed = function(settings) {
         console.log("this is the hex function");
     };
-}( jQuery ));
+}(jQuery));
 
 var state = {
     gameInSession: true,
@@ -24,7 +29,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function guesschecker(guess){
+function guesschecker(guess) {
     let percentoff = {};
     let correctVals = 0;
 
@@ -43,18 +48,18 @@ function guesschecker(guess){
         if (percentoff[color] == 0){
             document.querySelector("#" + color + "-result").innerHTML = "You got it! (" + percentoff[color] + "% off)";    
             correctVals += 1
-        }else{
+        } else {
             document.querySelector("#" + color + "-result").innerHTML = percentoff[color] + "% off";
         }
     }
-    if(correctVals == 3){
+    if (correctVals == 3) {
         alert("you got it right!")
         resetGame();
     }
     state.turnNumber += 1;
 }
 
-function getRandomColor(){
+function getRandomColor() {
     return {
         red: getRandomInt(0, 255),
         blue: getRandomInt(0, 255),
@@ -80,7 +85,7 @@ function resetGame(){
     clearInterval(timerVar);
 }
 
-function newGame(){
+function newGame() {
     state.gameInSession = true
     state.correct = getRandomColor()
     $("#newGame").hide()
@@ -94,22 +99,26 @@ function updateTime(){
     document.querySelector("#time").innerHTML = "Time(seconds): " + state.gameTime++/100;
 }
 
-function updateGame(){
+function updateGame() {
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
+    document.querySelector("#player-name").innerHTML = setting.playerName;
+    document.querySelector("#total-turns").innerHTML = setting.totalTurns;
 }
 
 $( document ).ready(function() { 
-
-    let setting = {
-        player_name:"john",
-        turn: 3
-    };
     document.querySelector("#num-turn").innerHTML = state.turnNumber;
     document.querySelector("#total-turns").innerHTML = state.totalTurns;
     resetGame();
 
+    $("#inputSubmit").click(function() {
+        setting.playerName = $("#name_box").val();
+	setting.totalTurns = parseInt($("#turn_box").val());
+	state.totalTurns = setting.totalTurns;
+	updateGame();
+    })
+
     $("#game").hexed(setting);
-    $("#guess").click(function(){
+    $("#guess").click(function() {
         let test = {
             red: getRandomInt(0, 255),
             blue: getRandomInt(0, 255),
@@ -117,18 +126,18 @@ $( document ).ready(function() {
         }
         guesschecker(state.guess); 
         updateGame();
-        if(state.turnNumber == state.totalTurns + 1){
+        if (state.turnNumber == state.totalTurns + 1) {
             resetGame();
         }
     })
-    $("#newGame").click(function(){
+    $("#newGame").click(function() {
         newGame()
     })
 });
 
 $(function() {
 
-    function hexFromRGB(r, g, b){
+    function hexFromRGB(r, g, b) {
         var hex = [r.toString(16), g.toString(16), b.toString(16)];
         state.guess = {
             red: r,
@@ -164,5 +173,3 @@ $(function() {
       $( "#green" ).slider( "value", 140 );
       $( "#blue" ).slider( "value", 60 );
 });
-
-
